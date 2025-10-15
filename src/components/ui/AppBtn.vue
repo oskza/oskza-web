@@ -56,10 +56,11 @@ const textColor = computed(() => {
     : colorMap[color].text;
 })
 
-const borderColor = computed(() =>
-  color === 'plain' && outline
-    ? 'var(--text-color)'
-    : colorMap[color].bg)
+const borderColor = computed(() => {
+  return color === 'plain' && outline
+          ? 'var(--text-color)'
+          : colorMap[color].bg;
+})
 </script>
 
 <style scoped>
