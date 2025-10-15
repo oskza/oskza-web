@@ -6,9 +6,9 @@
 
 <style scoped>
 .logo {
-  font-family: var(--title-font-stack);
-  font-size: 1.1rem;
+  font-family: var(--font-stack-mono);
+  font-size: var(--font-lg);
   font-weight: 600;
-  letter-spacing: .15rem;
+  letter-spacing: .125rem;
 }
 </style>
