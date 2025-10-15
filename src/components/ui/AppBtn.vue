@@ -75,8 +75,5 @@ const borderColor = computed(() => {
   transition: 0.2s;
 }
 
-.btn:hover { opacity: 0.85; }
-
 .btn-pill { border-radius: 999px; }
-
 </style>
