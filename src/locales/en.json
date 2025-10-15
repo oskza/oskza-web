@@ -1,6 +1,101 @@
 {
   "profile": {
     "name": "Zach Oskoidis",
-    "position": "Software Engineer"
+    "position": "Software Engineer",
+    "location": "Ierapetra, Greece"
+  },
+  "homePage": {
+    "sectionTitles": {
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  },
+  "projectsPage": {
+    "pageTitle": "Projects"
+  },
+  "projectPage": {
+    "sectionTitles": {
+      "overview": "Overview",
+      "features": "Features",
+      "links": "Links"
+    }
+  },
+  "btns": {
+    "contact": "Contact",
+    "resume": "Resume",
+    "back": "Back",
+    "seeAllProjects": "See all projects"
+  },
+  "contactForm": {
+    "title": "Fill the form to send me a message",
+    "submit": "Send",
+    "placeholders": {
+      "email": "Your email",
+      "subject": "Subject",
+      "msg": "Type your message here..."
+    },
+    "messages": {
+      "allFieldsAreRequiredError": "All fields are required"
+    }
+  },
+  "projectFilters": {
+    "title": "Filters",
+    "all": "All",
+    "clear": "Clear",
+    "labels": {
+      "type": "Type",
+      "stack": "Stack",
+      "category": "Category"
+    }
+  },
+  "projectTypes": {
+    "freelance": "Freelance"
+  },
+  "projectCategories": {
+    "automation": "Automation",
+    "selfhosted": "Self-Hosted",
+    "webdev": "Web Dev"
+  },
+  "projects": {
+    "a5sd5fs3": {
+      "title": "Self-Hosted Infrastructure",
+      "summary": "Modular self-hosted server ecosystem with automated deployment, service orchestration and maintenance.",
+      "description": "Built with Ansible and Docker, this system automates deployment and maintenance of a self-hosted Linux server. Modular Ansible roles handle core services, Docker hosting, system maintenance, and backups, with integrated monitoring, logging, and secure remote access. The infrastructure runs multiple user-focused services.",
+      "features": [
+        "Automated provisioning of Linux and Docker environments via Ansible",
+        "Runs multiple services tailored to user needs",
+        "Integrated reverse proxy, local DNS, SSL management",
+        "Centralized monitoring and logging dashboards",
+        "Secure remote access via VPN and tunneling",
+        "Automated system maintenance and backups via systemd timers",
+        "Easily extensible with additional roles and services"
+      ]
+    },
+    "f063f664": {
+      "title": "Notification System for Grandstream GDS",
+      "summary": "Event-driven notification system that connects a Grandstream GDS37xx intercom to Telegram, enabling instant alerts and remote door control.",
+      "description": "Using Node-RED and the Grandstream GDS37xx HTTP API, the system reacts to doorbell presses by capturing visitor snapshots and sending interactive Telegram messages with image and door control options. Event logging is included for auditing and monitoring.",
+      "features": [
+        "Uses the Grandstream GDS37xx HTTP API",
+        "Sends Telegram message with visitor snapshots",
+        "Inline actions for remote door unlock or ignore",
+        "Debounce logic to prevent repeated triggers",
+        "Event logging with timestamps",
+        "Dockerized deployment"
+      ]
+    },
+    "071e2747": {
+      "title": "Outdoor Weather Monitoring System",
+      "summary": "Arduino-based weather station collecting multiple environmental parameters, sending data via MQTT, with Telegram alerts and visualization dashboards.",
+      "description": "This system uses an Arduino device equipped with sensors for wind speed and direction, temperature, humidity, rainfall and light. Sensor data is sent via MQTT to a Node-RED server, which triggers Telegram alerts for critical readings. Data visualization and threshold management built with Grafana and Vue.js. Designed for greenhouse and outdoor use.",
+      "features": [
+        "Measures wind speed and direction, temperature, humidity, rainfall and light",
+        "Publishes data via MQTT",
+        "Sends Telegram alerts for critical readings",
+        "Data visualization and threshold management built with Grafana and Vue.js",
+        "Suitable for greenhouse and outdoor environmental monitoring",
+        "Dockerized deployment"
+      ]
+    }
   }
 }
