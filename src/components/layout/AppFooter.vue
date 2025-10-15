@@ -1,5 +1,13 @@
 <template>
 <footer class="footer">
-  <p>Lorem ipsum dolor sit amet.</p>
+  <GoTopBtn />
 </footer>
 </template>
+
+<script setup>
+import GoTopBtn from '../ui/GoTopBtn.vue'
+</script>
+
+<style scoped>
+.footer { padding: var(--spacing-xs); }
+</style>
