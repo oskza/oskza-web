@@ -1,8 +1,12 @@
 <template>
 <div class="logo">
-  <router-link :to="{ name: 'home' }">oskza</router-link>
+  <InternalLink routeName="home">oskza</InternalLink>
 </div>
 </template>
+
+<script setup>
+import InternalLink from './InternalLink.vue'
+</script>
 
 <style scoped>
 .logo {
