@@ -1,5 +1,7 @@
 <template>
-<div class="project-page">
-  <h1>Project</h1>
-</div>
+<ProjectPage />
 </template>
+
+<script setup>
+import ProjectPage from '../pages/ProjectPage.vue'
+</script>

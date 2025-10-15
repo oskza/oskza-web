@@ -1,5 +1,7 @@
 <template>
-<div class="projects">
-  <h1>{{ $t('projectsPage.pageTitle') }}</h1>
-</div>
+<ProjectsPage />
 </template>
+
+<script setup>
+import ProjectsPage from '../pages/ProjectsPage.vue'
+</script>
