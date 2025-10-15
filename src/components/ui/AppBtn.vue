@@ -65,7 +65,6 @@ const borderColor = computed(() => {
 
 <style scoped>
 .btn {
-  padding: var(--spacing-xs) var(--spacing-xl);
   font-size: inherit;
   font-weight: 600;
   border-radius: 3px;
