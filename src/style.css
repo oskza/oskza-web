@@ -2,6 +2,9 @@
   --title-font-stack: "Victor Mono", serif;
   --font-stack: Inter, serif;
 
+  --accent-color: #FF934F;
+  --text-on-accent-color: rgba(255, 255, 255, .87);
+
   font-optical-sizing: auto;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,6 +16,34 @@
   line-height: 1.5;
 
   text-align: center;
+
+  color-scheme: light dark;
+}
+
+html {
+  --bg-color: #242424;
+  --text-color: rgba(255, 255, 255, .87);
+  --muted-text-color: rgba(255, 255, 255, .4);
+
+  --primary-color: #505050;
+  --text-on-primary-color: var(--text-color);
+
+  --border-color: var(--primary-color);
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.light {
+  --bg-color: #fff;
+  --text-color: rgba(0, 0, 0, .87);
+  --muted-text-color: rgba(0, 0, 0, .6);
+
+  --primary-color: #102e4a;
+  --text-on-primary-color: rgba(255, 255, 255, .87);
+
+  --border-color: var(--muted-text-color);
 }
 
 *, *::before, *::after {
@@ -38,3 +69,5 @@ button {
   border: 0;
   outline: 0;
 }
+
+/* @media (prefers-color-scheme: light) {} */
