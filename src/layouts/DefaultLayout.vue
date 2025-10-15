@@ -4,11 +4,13 @@
   <main class="main-content">
     <router-view />
   </main>
+  <AppFooter />
 </div>
 </template>
 
 <script setup>
 import AppTopbar from '../components/layout/AppTopbar.vue'
+import AppFooter from '../components/layout/AppFooter.vue'
 </script>
 
 <style scoped>
