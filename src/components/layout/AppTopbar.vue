@@ -1,8 +1,12 @@
 <template>
 <div class="topbar">
-  <h1>oskza</h1>
+  <AppLogo />
 </div>
 </template>
+
+<script setup>
+import AppLogo from '../ui/AppLogo.vue'
+</script>
 
 <style scoped>
 .topbar {
