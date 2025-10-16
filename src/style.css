@@ -7,8 +7,9 @@
   --font-stack-sans: Inter, system-ui, sans-serif;
   --font-stack-mono: "Victor Mono", monospace;
 
-  --font-xs: 0.75rem;
-  --font-sm: 0.875rem;
+  --font-2xs: .65rem;
+  --font-xs: .75rem;
+  --font-sm: .875rem;
   --font-md: 1rem;
   --font-lg: 1.125rem;
   --font-xl: 1.25rem;
@@ -17,6 +18,7 @@
   --font-4xl: 2.25rem;
   --font-5xl: 3rem;
 
+  --spacing-3xs: .15rem;
   --spacing-2xs: .25rem;
   --spacing-xs: .5rem;
   --spacing-sm: .75rem;
@@ -76,5 +78,3 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-stack-mono); }
-
-/* @media (prefers-color-scheme: light) {} */
