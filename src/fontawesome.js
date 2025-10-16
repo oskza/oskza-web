@@ -3,11 +3,15 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import {
   faArrowUp, faArrowLeft, faEnvelopeSquare,
-  faSun, faMoon
+  faSun, faMoon, faCircleCheck, faLink
 } from '@fortawesome/free-solid-svg-icons'
-import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
+import {
+  faGithub, faGithubSquare, faLinkedin
+} from '@fortawesome/free-brands-svg-icons'
 
 library.add(faArrowUp, faArrowLeft, faEnvelopeSquare,
-            faSun, faMoon, faGithubSquare, faLinkedin)
+            faSun, faMoon, faCircleCheck, faLink,
+            faGithub, faGithubSquare, faLinkedin)
 
 export { FontAwesomeIcon }
