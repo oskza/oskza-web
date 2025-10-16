@@ -82,3 +82,8 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-stack-mono); }
+
+html.light .btn-go-top {
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
