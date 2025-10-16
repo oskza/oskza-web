@@ -35,7 +35,7 @@ const links = [
 <style scoped>
 .social-links {
   display: flex;
-  font-size: var(--font-2xl);
+  font-size: var(--font-xl);
 }
 
 a { display: flex; }
