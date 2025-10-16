@@ -6,7 +6,7 @@
     <TagsSection :type="project.type" :stack="project.stack" :categories="project.categories" />
     <OverviewSection :description="$t(`projects.${project.id}.description`)" />
     <FeaturesSection :features="$tm(`projects.${project.id}.features`)" />
-    <LinksSection :links="project.links" />
+    <LinksSection v-if="project.links" :links="project.links" />
   </div>
 </div>
 </template>
