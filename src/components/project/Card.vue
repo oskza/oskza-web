@@ -1,8 +1,10 @@
 <template>
 <div class="project-card">
-  <InternalLink routeName="project" :params="{ slug: project.slug }">
-    <h4 class="title">{{ $t(`projects.${ project.id }.title`) }}</h4>
-  </InternalLink>
+  <h4 class="title">
+    <InternalLink routeName="project" :params="{ slug: project.slug }">
+      {{ $t(`projects.${ project.id }.title`) }}
+    </InternalLink>
+  </h4>
   <p class="summary">{{ shortDescr($t(`projects.${ project.id }.summary`)) }}</p>
   <div class="tags">
     <TechTagList v-if="project.stack?.length" :stack="project.stack" />
