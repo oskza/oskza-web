@@ -18,6 +18,10 @@
       "overview": "Overview",
       "features": "Features",
       "links": "Links"
+    },
+    "links": {
+      "repository": "Repository",
+      "demo": "Live Demo"
     }
   },
   "btns": {
