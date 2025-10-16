@@ -1,8 +1,12 @@
 :root {
   --accent-color: #ff934f;
   --text-on-accent-color: rgba(255, 255, 255, .87);
+
   --success-color: #0d9e0d;
   --error-color: #da0909;
+
+  --tech-tag-bg-color: #eef6ff;
+  --tech-tag-text-color: #0070f3;
 
   --font-stack-sans: Inter, system-ui, sans-serif;
   --font-stack-mono: "Victor Mono", monospace;
