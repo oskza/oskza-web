@@ -49,11 +49,11 @@ const tag = computed(() => isLink.value ? 'a' : 'button')
 const bgColor = computed(() => outline ? 'transparent' : colorMap[color].bg)
 
 const textColor = computed(() => {
-  if (color === 'plain' && outline)
-    return 'var(--text-color)'
-  return outline
-    ? colorMap[color].bg
-    : colorMap[color].text;
+  return (color === 'plain' && outline)
+          ? 'var(--text-color)'
+          : (outline)
+            ? colorMap[color].bg
+            : colorMap[color].text;
 })
 
 const borderColor = computed(() => {
@@ -65,13 +65,15 @@ const borderColor = computed(() => {
 
 <style scoped>
 .btn {
+  display: inline-block;
   font-size: inherit;
-  font-weight: 600;
+  line-height: inherit;
+  letter-spacing: .05rem;
   border-radius: 3px;
   cursor: pointer;
-  border: 1px solid var(--btn-border);
   background-color: var(--btn-bg);
   color: var(--btn-text);
+  border: 1px solid var(--btn-border);
   transition: 0.2s;
 }
 

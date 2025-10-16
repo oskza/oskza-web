@@ -11,5 +11,5 @@ const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 </script>
 
 <style scoped>
-.btn-go-top { padding: var(--spacing-xs) var(--spacing-md); }
+.btn-go-top { padding: var(--spacing-2xs) var(--spacing-sm); }
 </style>

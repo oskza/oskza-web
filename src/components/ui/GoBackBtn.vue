@@ -1,7 +1,7 @@
 <template>
 <AppBtn class="btn-go-back" color="plain" :onClick="goBack">
-  <font-awesome-icon icon="fa-solid fa-arrow-left" class="icon" />
-  {{ $t('btns.back') }}
+  <font-awesome-icon class="icon" icon="fa-solid fa-arrow-left" />
+  <span class="text">{{ $t('btns.back') }}</span>
 </AppBtn>
 </template>
 
@@ -17,10 +17,10 @@ const goBack = () => router.back()
 .btn-go-back {
   display: flex;
   align-items: center;
-  gap: var(--spacing-2xs);
-  font-weight: 400;
-  color: var(--muted-text-color);
+  gap: var(--spacing-3xs);
 }
 
-.icon { color: var(--text-color); }
+.icon { font-size: var(--font-2xs); }
+
+.text { color: var(--muted-text-color); }
 </style>
