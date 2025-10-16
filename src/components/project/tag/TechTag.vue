@@ -1,5 +1,5 @@
 <template>
-<BaseTag class="tech-tag" queryKey="tech" :queryValue="tech">
+<BaseTag class="tech-tag" :query="{ tech: tech }">
   {{ tech }}
 </BaseTag>
 </template>

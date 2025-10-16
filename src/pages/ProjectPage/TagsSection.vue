@@ -1,7 +1,7 @@
 <template>
 <AppSection class="tags">
   <p class="type">
-    <InternalLink routeName="projects" queryKey="type" :queryValue="type">
+    <InternalLink routeName="projects" :query="{ type: type }">
       {{ $t(`projectTypes.${ type }`) }}
     </InternalLink>
   </p>

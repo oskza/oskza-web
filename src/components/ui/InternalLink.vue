@@ -1,23 +1,23 @@
 <template>
-<router-link
-  class="internal-link"
-  :to="linkTo">
-  <slot></slot>
-</router-link>
+  <router-link
+    class="internal-link"
+    :to="linkTo">
+    <slot></slot>
+  </router-link>
 </template>
 
 <script setup>
 import { computed } from 'vue'
 
-const { routeName, queryKey, queryValue } = defineProps({
+const { routeName, params, query } = defineProps({
   routeName: { type: String, required: true },
-  queryKey: String,
-  queryValue: String
+  params: { type: Object, default: null },
+  query: { type: Object, default: null }
 })
 
-const linkTo = computed(() => {
-  return (queryKey && queryValue)
-    ? { name: routeName, query: { [queryKey]: queryValue } }
-    : { name: routeName };
-})
+const linkTo = computed(() => ({
+  name: routeName,
+  ...(params && { params }),
+  ...(query && { query })
+}))
 </script>

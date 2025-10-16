@@ -1,5 +1,5 @@
 <template>
-<BaseTag class="category-tag" queryKey="category" :queryValue="category">
+<BaseTag class="category-tag" :query="{ category: category }">
   {{ $t(`projectCategories.${ category }`) }}
 </BaseTag>
 </template>
