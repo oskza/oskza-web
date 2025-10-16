@@ -35,7 +35,6 @@ const project = projects.find(project => project.slug === route.params.slug)
   flex-direction: column;
   padding: 0 var(--spacing-xl) var(--spacing-xl);
   gap: var(--spacing-3xl);
-  /* gap: var(--spacing-xl); */
 }
 
 .summary {

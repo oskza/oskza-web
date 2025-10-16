@@ -34,9 +34,5 @@ li {
 
 }
 
-.text {
-  /* color: var(--muted-text-color); */
-}
-
 .icon { color: var(--primary-color); }
 </style>
