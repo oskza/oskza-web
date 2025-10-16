@@ -1,23 +1,23 @@
 <template>
 <div class="projects-page">
-  <div class="page-head">
-    <h1>{{ $t('projectsPage.pageTitle') }}</h1>
-  </div>
-  <div class="page-options">
-    <GoBackBtn />
-  </div>
+  <h2 class="page-title">{{ $t('projectsPage.pageTitle') }}</h2>
   <div class="page-content">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo consectetur officiis dolorem vero odio quasi a exercitationem quidem et pariatur magnam quod quo non, sapiente voluptatum nostrum repudiandae, rem at nemo! Mollitia et ipsa libero impedit corrupti sunt, natus culpa alias illum, excepturi fugiat facilis in nemo iusto enim nam!</p>
   </div>
 </div>
 </template>
 
-<script setup>
-import GoBackBtn from '../components/ui/GoBackBtn.vue'
-</script>
-
 <style scoped>
-.page-options {
-  font-size: var(--font-sm);
+.page-title {
+  font-size: var(--font-3xl);
+  line-height: 2.5rem;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--spacing-xl) var(--spacing-xl);
+  gap: var(--spacing-xl);
 }
 </style>
