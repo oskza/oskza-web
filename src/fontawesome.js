@@ -1,9 +1,9 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-import { faArrowUp, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faArrowUp, faArrowLeft, faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons'
+import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faArrowUp, faArrowLeft, faGithub)
+library.add(faArrowUp, faArrowLeft, faEnvelopeSquare, faGithubSquare, faLinkedin)
 
 export { FontAwesomeIcon }
