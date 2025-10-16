@@ -2,12 +2,14 @@
 <div class="topbar">
   <AppLogo />
   <SocialLinks />
+  <AppSettings />
 </div>
 </template>
 
 <script setup>
 import AppLogo from '../ui/AppLogo.vue'
 import SocialLinks from '../ui/SocialLinks.vue'
+import AppSettings from './AppSettings.vue'
 </script>
 
 <style scoped>
