@@ -14,5 +14,6 @@ import InternalLink from './InternalLink.vue'
   font-size: var(--font-lg);
   font-weight: 600;
   letter-spacing: .125rem;
+  color: var(--text-color);
 }
 </style>
