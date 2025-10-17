@@ -18,8 +18,8 @@ const emit = defineEmits(['clear'])
 
 <style scoped>
 .btn-clear-filters {
+  padding: var(--spacing-xs) var(--spacing-lg);
   margin: 0 auto;
-  padding: .5rem 1.25rem;
-  font-size: .75rem;
+  font-size: var(--font-xs);
 }
 </style>

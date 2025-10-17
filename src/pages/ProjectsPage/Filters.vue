@@ -70,14 +70,14 @@ const clearFilters = () => {
 .filters {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--spacing-md);
 }
 
 .options {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  padding: .5rem 1rem 1rem;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-md) var(--spacing-md);
   border: 1px solid var(--primary-color);
   border-radius: 3px;
 }

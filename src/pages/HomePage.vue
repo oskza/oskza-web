@@ -1,6 +1,19 @@
 <template>
 <div class="home-page">
-  <h1>Home</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, neque quod enim necessitatibus repellendus sequi perspiciatis molestiae ducimus nam nobis sed amet ipsa quas laboriosam unde nostrum illum et! Deserunt dolorum distinctio, repellat aspernatur fuga nemo unde perferendis ullam vero voluptatibus libero saepe quis eius impedit perspiciatis! Molestiae, quia unde?</p>
+
+  <h2 class="page-title">Home</h2>
+
+  <div class="page-content">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, cumque?</p>
+  </div>
 </div>
 </template>
+
+<style scoped>
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
+  padding: 0 var(--spacing-xl) var(--spacing-xl);
+}
+</style>

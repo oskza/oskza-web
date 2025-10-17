@@ -1,13 +1,13 @@
 <template>
-  <div class="option">
-    <label :for="id">{{ label }}</label>
-    <select :id="id" v-model="model" @change="handleChange">
-      <option value="">{{ $t('projectFilters.allOption') }}</option>
-      <option v-for="(option, index) in options" :key="index" :value="option">
-        {{ optionText(option) }}
-      </option>
-    </select>
-  </div>
+<div class="option">
+  <label :for="id">{{ label }}</label>
+  <select :id="id" v-model="model" @change="handleChange">
+    <option value="">{{ $t('projectFilters.allOption') }}</option>
+    <option v-for="(option, index) in options" :key="index" :value="option">
+      {{ optionText(option) }}
+    </option>
+  </select>
+</div>
 </template>
 
 <script setup>
@@ -23,14 +23,9 @@ const props = defineProps({
 
 const emit = defineEmits(['update:modelValue'])
 
-const model = computed({
-  get: () => props.modelValue,
-  set: (val) => emit('update:modelValue', val)
-})
+const model = computed({ get: () => props.modelValue, set: val => emit('update:modelValue', val) })
 
-const handleChange = (e) => {
-  emit('update:modelValue', e.target.value)
-}
+const handleChange = e => emit('update:modelValue', e.target.value)
 </script>
 
 <style scoped>
@@ -38,18 +33,18 @@ const handleChange = (e) => {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: .15rem;
+  gap: var(--spacing-3xs);
   color: var(--primary-color);
 }
 
 label {
   font-family: var(--title-font-stack);
-  font-size: .75rem;
+  font-size: var(--font-xs);
 }
 
 select {
   width: 100%;
-  padding: .5rem;
-  font-size: .9rem;
+  padding: var(--spacing-xs);
+  font-size: var(--font-sm);
 }
 </style>

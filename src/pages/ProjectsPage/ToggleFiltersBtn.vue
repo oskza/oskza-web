@@ -12,9 +12,7 @@ const props = defineProps({ modelValue: { type: Boolean, required: true } })
 
 const emit = defineEmits(['update:modelValue'])
 
-const toggleFiltersVisibility = () => {
-  emit('update:modelValue', !props.modelValue)
-}
+const toggleFiltersVisibility = () => emit('update:modelValue', !props.modelValue)
 </script>
 
 <style scoped>
