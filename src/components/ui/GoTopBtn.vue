@@ -12,4 +12,9 @@ const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
 <style scoped>
 .btn-go-top { padding: var(--spacing-2xs) var(--spacing-sm); }
+
+html.light .btn-go-top {
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 </style>
