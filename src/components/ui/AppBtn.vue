@@ -1,7 +1,7 @@
 <template>
 <component
   class="btn"
-  :class="{ 'btn-pill': pill }"
+  :class="[`btn-${color}`, { 'btn-pill': pill, 'btn-outline': outline }]"
   :is="tag"
   :href="isLink ? url : null"
   :target="isLink && external ? '_blank' : null"
@@ -21,9 +21,18 @@ import { computed } from 'vue'
 const { onClick, url, external, pill, outline, color } = defineProps({
   onClick: Function,
   url: String,
-  external: Boolean,
-  pill: Boolean,
-  outline: Boolean,
+  external: {
+    type: Boolean,
+    default: false
+  },
+  pill: {
+    type: Boolean,
+    default: false
+  },
+  outline: {
+    type: Boolean,
+    default: false
+  },
   color: {
     type: String,
     default: 'primary',
