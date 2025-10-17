@@ -17,20 +17,20 @@ import CTABtnList from '../ui/CTABtnList.vue'
 .header {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 3rem 2rem;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-3xl) var(--spacing-xl);
   background-color: var(--header-bg-color);
   color: var(--header-text-color);
 }
 
 .name {
-  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-5xl);
   line-height: 3.2rem;
-  margin-bottom: .75rem;
 }
 
 .position {
-  font-size: 1.25rem;
+  font-size: var(--font-xl);
   line-height: 1.7rem;
   color: var(--muted-text-color);
 }
