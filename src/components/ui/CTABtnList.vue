@@ -6,7 +6,7 @@
     </CTABtn>
   </li>
   <li>
-    <CTABtn color="primary" icon="fa-solid fa-file-pdf" url="/resume_el.pdf" external outline>
+    <CTABtn color="primary" icon="fa-solid fa-file-pdf" :url="resumeUrl" external outline>
       {{ $t('btns.resume') }}
     </CTABtn>
   </li>
@@ -14,13 +14,19 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import CTABtn from './CTABtn.vue'
+
+const { locale } = useI18n()
+
+const resumeUrl = computed(() => `/resume_${locale.value}.pdf`)
 </script>
 
 <style scoped>
 .cta-btn-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--spacing-md);
 }
 </style>
