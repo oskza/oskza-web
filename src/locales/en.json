@@ -2,7 +2,8 @@
   "profile": {
     "name": "Zach Oskoidis",
     "position": "Software Engineer",
-    "location": "Ierapetra, Greece"
+    "location": "Ierapetra, Greece",
+    "summary": "Software Engineer with experience in software development, self-hosted systems and automation."
   },
   "homePage": {
     "sectionTitles": {
@@ -28,7 +29,7 @@
     "contact": "Contact",
     "resume": "Resume",
     "back": "Back",
-    "seeAllProjects": "See all projects"
+    "seeMoreProjects": "See all projects"
   },
   "contactForm": {
     "title": "Fill the form to send me a message",
