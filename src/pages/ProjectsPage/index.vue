@@ -1,19 +1,29 @@
 <template>
 <div class="projects-page">
   <h2 class="page-title">{{ $t('projectsPage.pageTitle') }}</h2>
+  <div class="page-options">
+    <GoBackBtn />
+    <ToggleFiltersBtn v-model="filtersVisible" />
+  </div>
   <div class="page-content">
+    <Filters v-show="filtersVisible" />
     <List :projects="filteredProjects" />
   </div>
 </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
-import List from '../components/project/List.vue'
-import { projects as allProjects } from '../data/projects'
+import ToggleFiltersBtn from './ToggleFiltersBtn.vue'
+import Filters from './Filters.vue'
+import List from '../../components/project/List.vue'
+import GoBackBtn from '../../components/ui/GoBackBtn.vue'
+import { projects as allProjects } from '../../data/projects'
 
 const route = useRoute()
+
+const filtersVisible = ref(false)
 
 const toArray = val => (val ? (Array.isArray(val) ? val : [val]) : [])
 
@@ -39,6 +49,15 @@ const filteredProjects = computed(() => {
   font-size: var(--font-4xl);
   line-height: 2.75rem;
   padding: var(--spacing-3xl) var(--spacing-xl);
+}
+
+.page-options {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--spacing-xl);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-sm);
+  color: var(--muted-text-color);
 }
 
 .page-content {

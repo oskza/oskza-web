@@ -39,9 +39,9 @@
     }
   },
   "projectFilters": {
-    "title": "Φίλτρα",
-    "all": "Όλα",
-    "clear": "Καθαρισμός",
+    "showFilters": "Φίλτρα",
+    "clearFilters": "Καθαρισμός",
+    "allOption": "Όλα",
     "labels": {
       "type": "Τύπος",
       "stack": "Τεχνολογία",

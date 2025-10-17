@@ -43,9 +43,9 @@
     }
   },
   "projectFilters": {
-    "title": "Filters",
-    "all": "All",
-    "clear": "Clear",
+    "showFilters": "Filters",
+    "clearFilters": "Clear",
+    "allOption": "All",
     "labels": {
       "type": "Type",
       "stack": "Stack",

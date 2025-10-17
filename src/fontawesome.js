@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import {
   faArrowUp, faArrowLeft, faEnvelopeSquare,
-  faSun, faMoon, faCircleCheck, faLink
+  faSun, faMoon, faCircleCheck, faLink,
+  faSliders, faXmark
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -12,6 +13,7 @@ import {
 
 library.add(faArrowUp, faArrowLeft, faEnvelopeSquare,
             faSun, faMoon, faCircleCheck, faLink,
+            faSliders, faXmark,
             faGithub, faGithubSquare, faLinkedin)
 
 export { FontAwesomeIcon }
