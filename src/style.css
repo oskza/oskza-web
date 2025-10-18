@@ -50,8 +50,11 @@ html {
   --bg-color: #242424;
   --text-color: rgba(255, 255, 255, .87);
   --muted-text-color: rgba(255, 255, 255, .4);
+
   --primary-color: #505050;
   --text-on-primary-color: var(--text-color);
+  --muted-text-on-primary-color: var(--muted-text-color);
+
   --border-color: var(--primary-color);
 
   --header-bg-color: var(--bg-color);
@@ -66,8 +69,11 @@ html.light {
   --bg-color: #fff;
   --text-color: rgba(0, 0, 0, .87);
   --muted-text-color: rgba(0, 0, 0, .6);
+
   --primary-color: #102e4a;
   --text-on-primary-color: rgba(255, 255, 255, .87);
+  --muted-text-on-primary-color: rgba(255, 255, 255, .4);
+
   --border-color: var(--muted-text-color);
 
   --header-bg-color: var(--primary-color);

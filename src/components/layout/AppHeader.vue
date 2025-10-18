@@ -19,6 +19,7 @@ import CTABtnList from '../ui/CTABtnList.vue'
   flex-direction: column;
   gap: var(--spacing-xl);
   padding: var(--spacing-3xl) var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
   background-color: var(--header-bg-color);
   color: var(--header-text-color);
 }
@@ -32,6 +33,6 @@ import CTABtnList from '../ui/CTABtnList.vue'
 .position {
   font-size: var(--font-xl);
   line-height: 1.7rem;
-  color: var(--muted-text-color);
+  color: var(--muted-text-on-primary-color);
 }
 </style>

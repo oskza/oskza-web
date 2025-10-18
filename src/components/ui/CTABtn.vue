@@ -35,7 +35,12 @@ const filteredProps = computed(() => {
   font-weight: 700;
 }
 
-.cta-btn.btn-primary.btn-outline { color: var(--text-color); }
+.cta-btn.btn-outline { color: var(--header-text-color); }
+
+html.light .btn-outline,
+html.light .btn-outline .icon {
+  border-color: var(--muted-text-on-primary-color);
+}
 
 .icon {
   position: absolute;
