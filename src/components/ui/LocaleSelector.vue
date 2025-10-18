@@ -31,6 +31,7 @@ const changeLang = lang => locale.value = lang
 li:not(:last-child)::after {
   content: "|";
   margin: 0 var(--spacing-2xs);
+  color: var(--border-color);
   opacity: .65;
 }
 
