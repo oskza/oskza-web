@@ -17,7 +17,7 @@ export const projects = [
     type: 'freelance',
     featured: true,
     links: null,
-    stack: ['Node-RED', 'Telegram Bot API', 'Docker'],
+    stack: ['Node-RED', 'Docker', 'Telegram Bot API'],
     categories: ['automation']
   },
   {
@@ -26,7 +26,7 @@ export const projects = [
     type: 'freelance',
     featured: true,
     links: null,
-    stack: ['Arduino', 'MQTT', 'Node-RED', 'Grafana', 'Vue.js', 'Telegram Bot API', 'Docker'],
+    stack: ['Arduino', 'Node-RED', 'MQTT', 'Grafana', 'Vue.js', 'Docker', 'Telegram Bot API'],
     categories: ['automation', 'webdev']
   }
 ]
