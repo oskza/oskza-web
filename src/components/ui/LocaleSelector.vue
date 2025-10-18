@@ -36,7 +36,7 @@ li:not(:last-child)::after {
 
 .btn-lang {
   font-family: var(--font-stack-mono);
-  color: var(--muted-text-color);
+  color: inherit;
 }
 
 .selected {

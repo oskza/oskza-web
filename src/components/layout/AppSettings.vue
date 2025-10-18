@@ -15,5 +15,6 @@ import LocaleSelector from '../ui/LocaleSelector.vue'
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
+  color: var(--muted-text-color);
 }
 </style>
