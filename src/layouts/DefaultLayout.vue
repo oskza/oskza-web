@@ -20,5 +20,9 @@ import AppFooter from '../components/layout/AppFooter.vue'
   min-height: 100vh;
 }
 
-.main-content { flex: 1; }
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 </style>

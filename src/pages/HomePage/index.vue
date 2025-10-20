@@ -1,25 +1,54 @@
 <template>
 <div class="home-page">
-  <AppHeader />
-  <div class="page-content">
-    <ProjectsSection :projects="featuredProjects" />
+  <div class="profile">
+    <h1 class="name">{{ $t('profile.name') }}</h1>
+    <h2 class="position">{{ $t('profile.position') }}</h2>
   </div>
+  <div class="details">
+    <p class="summary">{{ $t('profile.summary') }}</p>
+    <p class="resume"><ResumeLink /></p>
+  </div>
+  <CTABtnList />
 </div>
 </template>
 
 <script setup>
-import AppHeader from '../../components/layout/AppHeader.vue'
-import ProjectsSection from './ProjectsSection.vue'
-import { projects } from '../../data/projects'
-
-const featuredProjects = projects.filter(project => project.featured === true)
+import ResumeLink from './ResumeLink.vue'
+import CTABtnList from './CTABtnList.vue'
 </script>
 
 <style scoped>
-.page-content {
+.home-page {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-3xl);
-  padding: 0 var(--spacing-xl) var(--spacing-xl);
+  justify-content: space-evenly;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-3xl) var(--spacing-xl) var(--spacing-xl);
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.name {
+  font-size: var(--font-5xl);
+  line-height: 3.2rem;
+}
+
+.position {
+  font-size: var(--font-xl);
+  line-height: 1.7rem;
+  color: var(--muted-text-on-primary-color);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
 }
 </style>

@@ -5,12 +5,6 @@
     "location": "Ιεράπετρα, Κρήτη",
     "summary": "Μηχανικός Λογισμικού με εμπειρία στην ανάπτυξη εφαρμογών, self-hosted συστημάτων και αυτοματισμών."
   },
-  "homePage": {
-    "sectionTitles": {
-      "projects": "Έργα",
-      "contact": "Επικοινωνία"
-    }
-  },
   "projectsPage": {
     "pageTitle": "Έργα"
   },
@@ -22,10 +16,15 @@
     }
   },
   "btns": {
+    "back": "Πίσω"
+  },
+  "links": {
+    "resume": "Βιογραφικό"
+  },
+  "ctaBtns": {
     "contact": "Επικοινωνία",
-    "resume": "Βιογραφικό",
-    "back": "Πίσω",
-    "seeMoreProjects": "Δείτε όλα τα έργα"
+    "projects": "Έργα",
+    "courses": "Μαθήματα"
   },
   "contactForm": {
     "title": "Συμπληρώστε την φόρμα για να στείλετε μήνυμα",

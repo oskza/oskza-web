@@ -35,17 +35,34 @@ const filteredProps = computed(() => {
   font-weight: 700;
 }
 
-.cta-btn.btn-outline { color: var(--header-text-color); }
-
-html.light .btn-outline,
-html.light .btn-outline .icon {
-  border-color: var(--muted-text-on-primary-color);
-}
+.btn-outline { color: var(--header-text-color); }
 
 .icon {
   position: absolute;
   left: var(--spacing-xl);
   padding-right: var(--spacing-sm);
   border-right: 1.5px solid var(--border-color);
+}
+
+.btn-primary:not(.btn-outline) {
+  --primary-color-dark: color-mix(in srgb, var(--primary-color) 80%, black);
+  background-color: var(--primary-color-dark);
+  border-color: var(--primary-color-dark);
+}
+
+.btn-primary:not(.btn-outline) .icon { border-color: var(--bg-color); }
+
+html.light .btn-accent .icon,
+html.light .btn-outline,
+html.light .btn-outline .icon,
+html.light .btn-primary .icon {
+  border-color: var(--muted-text-on-primary-color);
+}
+
+html.light .btn-outline {
+  --primary-color-dark: color-mix(in srgb, var(--primary-color) 93%, white);
+  background-color: var(--primary-color-dark);
+  border-color: var(--primary-color-dark);
+
 }
 </style>
