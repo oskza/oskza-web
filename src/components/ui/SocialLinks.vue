@@ -13,15 +13,15 @@ import { profile } from '../../data/profile'
 
 const links = [
   {
-    name: 'github',
-    url: profile.github,
-    icon: 'fa-brands fa-github-square',
-    external: true
-  },
-  {
     name: 'linkedin',
     url: profile.github,
     icon: 'fa-brands fa-linkedin',
+    external: true
+  },
+  {
+    name: 'github',
+    url: profile.github,
+    icon: 'fa-brands fa-github-square',
     external: true
   },
   {
