@@ -1,5 +1,5 @@
 <template>
-<a class="resume-link" :href="`/resume_${locale}.pdf`" target="_blank">
+<a class="resume-link" :href="`/resume-${locale}.pdf`" target="_blank">
   <font-awesome-icon class="icon" icon="fa-solid fa-file-pdf" />
   <span class="text">{{ $t('links.resume') }}</span>
 </a>
