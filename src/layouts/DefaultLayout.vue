@@ -4,13 +4,16 @@
   <main class="main-content">
     <router-view />
   </main>
-  <AppFooter />
+  <AppFooter v-if="!route.meta.hideFooter" />
 </div>
 </template>
 
 <script setup>
+import { useRoute } from 'vue-router'
 import AppTopbar from '../components/layout/AppTopbar.vue'
 import AppFooter from '../components/layout/AppFooter.vue'
+
+const route = useRoute()
 </script>
 
 <style scoped>

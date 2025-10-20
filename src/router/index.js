@@ -12,7 +12,8 @@ const routes = [
       {
         path: '',
         name: 'home',
-        component: Home
+        component: Home,
+        meta: { hideFooter: true }
       },
       { path: 'projects',
         name: 'projects',
