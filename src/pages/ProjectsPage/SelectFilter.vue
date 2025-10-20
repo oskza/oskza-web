@@ -46,5 +46,6 @@ select {
   width: 100%;
   padding: var(--spacing-xs);
   font-size: var(--font-sm);
+  background-color: var(--primary-color);
 }
 </style>

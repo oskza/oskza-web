@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed, watch } from 'vue'
 import SelectFilter from './SelectFilter.vue'
 import ClearFiltersBtn from './ClearFiltersBtn.vue'
 import { useRoute, useRouter } from 'vue-router'
@@ -41,13 +41,36 @@ const route = useRoute()
 
 const unique = (arr) => [...new Set(arr)].filter(Boolean)
 
-const typeOptions = unique(projects.map(p => p.type))
-const categoryOptions = unique(projects.flatMap(p => p.categories))
-const techOptions = unique(projects.flatMap(p => p.stack))
-
 const selectedType = ref(route.query.type ?? '')
 const selectedCategory = ref((route.query.category ?? ''))
 const selectedTech = ref((route.query.tech ?? ''))
+
+const typeOptions = computed(() => {
+  const filtered = projects.filter(p => {
+    const matchCategory = !selectedCategory.value || p.categories?.includes(selectedCategory.value)
+    const matchTech = !selectedTech.value || p.stack?.includes(selectedTech.value)
+    return matchCategory && matchTech
+  })
+  return unique(filtered.map(p => p.type))
+})
+
+const categoryOptions = computed(() => {
+  const filtered = projects.filter(p => {
+    const matchType = !selectedType.value || p.type === selectedType.value
+    const matchTech = !selectedTech.value || p.stack?.includes(selectedTech.value)
+    return matchType && matchTech
+  })
+  return unique(filtered.flatMap(p => p.categories))
+})
+
+const techOptions = computed(() => {
+  const filtered = projects.filter(p => {
+    const matchType = !selectedType.value || p.type === selectedType.value
+    const matchCategory = !selectedCategory.value || p.categories?.includes(selectedCategory.value)
+    return matchType && matchCategory
+  })
+  return unique(filtered.flatMap(p => p.stack))
+})
 
 const updateQuery = () => {
   const query = {
@@ -64,6 +87,15 @@ const clearFilters = () => {
   selectedTech.value = ''
   router.replace({ name: 'projects', query: {} })
 }
+
+watch(
+  () => route.query, query => {
+    selectedType.value = query.type ?? ''
+    selectedCategory.value = query.category ?? ''
+    selectedTech.value = query.tech ?? ''
+  },
+  { immediate: true }
+)
 </script>
 
 <style scoped>
