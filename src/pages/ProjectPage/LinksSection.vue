@@ -1,7 +1,5 @@
 <template>
-<AppSection class="links"
-    v-if="links.repository || links.demo"
-    :title="$t('projectPage.sectionTitles.links')">
+<AppSection v-if="Object.keys(links).length" class="links" :title="$t('projectPage.sectionTitles.links')">
   <ul class="link-list">
     <li v-if="links.repository">
       <font-awesome-icon class="icon" icon="fa-brands fa-github" />
