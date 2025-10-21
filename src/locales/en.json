@@ -5,6 +5,12 @@
     "location": "Ierapetra, Greece",
     "summary": "Software Engineer with experience in software development, self-hosted systems and automation."
   },
+  "contactPage": {
+    "pageTitle": "Contact"
+  },
+  "coursesPage": {
+    "pageTitle": "Courses"
+  },
   "projectsPage": {
     "pageTitle": "Projects"
   },
