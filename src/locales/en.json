@@ -45,7 +45,8 @@
       "msg": "Type your message here..."
     },
     "messages": {
-      "allFieldsAreRequiredError": "All fields are required"
+      "success": "The message was sent successfully",
+      "somethingWentWrongError": "Something went wrong. Please, retry later"
     }
   },
   "projectFilters": {

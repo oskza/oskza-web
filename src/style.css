@@ -60,6 +60,12 @@ html {
   --header-bg-color: var(--bg-color);
   --header-text-color: var(--text-color);
 
+  --contact-form-bg-color: var(--primary-color);
+  --contact-form-text-color: var(--text-on-primary-color);
+
+  --contact-form-field-bg-color: #3b3b3b;
+  --contact-form-field-text-color: var(--text-color);
+
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -76,6 +82,16 @@ html.light {
 
   --header-bg-color: var(--primary-color);
   --header-text-color: var(--text-on-primary-color);
+
+  --contact-form-bg-color: #fff;
+  --contact-form-text-color: var(--primary-color);
+
+  --contact-form-field-bg-color: #fff;
+  --contact-form-field-text-color: var(--text-color);
+}
+
+html.light .contact-form .field {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 *, *::before, *::after { box-sizing: border-box; padding: 0; margin: 0; }

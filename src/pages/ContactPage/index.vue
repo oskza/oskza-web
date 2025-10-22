@@ -2,10 +2,16 @@
 <div class="contact-page">
   <h2 class="page-title">{{ $t(`contactPage.pageTitle`) }}</h2>
   <div class="page-content">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aut dolorem rem accusamus reprehenderit magni autem delectus sapiente esse porro.</p>
+    <ContactInfoList />
+    <ContactForm />
   </div>
 </div>
 </template>
+
+<script setup>
+import ContactInfoList from './ContactInfoList.vue'
+import ContactForm from './ContactForm.vue'
+</script>
 
 <style scoped>
 .page-title {
@@ -17,7 +23,7 @@
 .page-content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-3xl);
-  padding: 0 var(--spacing-xl) var(--spacing-xl);
+  gap: var(--spacing-xl);
+  padding: 0 var(--spacing-sm) var(--spacing-xl);
 }
 </style>

@@ -41,7 +41,8 @@
       "msg": "Πληκτρολογήστε το μήνυμά σας..."
     },
     "messages": {
-      "allFieldsAreRequiredError": "Όλα τα πεδία είναι απαραίτητα"
+      "success": "Το μήνυμά σας εστάλη επιτυχώς",
+      "somethingWentWrongError": "Κάτι πήγε στραβά. Παρακαλώ, δοκιμάστε αργότερα"
     }
   },
   "projectFilters": {

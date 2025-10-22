@@ -7,7 +7,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import AppBtn from './AppBtn.vue'
+import AppBtn from '../../components/ui/AppBtn.vue'
 
 const props = defineProps({
   color: String,
