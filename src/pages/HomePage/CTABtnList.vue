@@ -21,7 +21,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import CTABtn from './CTABtn.vue'
+import CTABtn from '../../components/ui/CTABtn.vue'
 
 const { locale } = useI18n()
 
