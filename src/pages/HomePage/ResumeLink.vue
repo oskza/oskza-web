@@ -22,5 +22,5 @@ const { locale } = useI18n()
   font-weight: 600;
 }
 
-.text { color: var(--muted-text-on-primary-color); }
+.text { color: var(--muted-text-color); }
 </style>

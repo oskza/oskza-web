@@ -19,6 +19,7 @@ const { course } = defineProps({
   font-size: var(--font-xs);
   font-weight: 600;
   background-color: var(--primary-color);
+  color: var(--text-on-primary-color);
   border-radius: 3px;
 }
 </style>

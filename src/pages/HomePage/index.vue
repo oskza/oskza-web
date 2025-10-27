@@ -25,8 +25,6 @@ import CTABtnList from './CTABtnList.vue'
   justify-content: space-evenly;
   gap: var(--spacing-lg);
   padding: var(--spacing-3xl) var(--spacing-xl) var(--spacing-xl);
-  background-color: var(--header-bg-color);
-  color: var(--header-text-color);
 }
 
 .profile {
@@ -43,7 +41,7 @@ import CTABtnList from './CTABtnList.vue'
 .position {
   font-size: var(--font-xl);
   line-height: 1.7rem;
-  color: var(--muted-text-on-primary-color);
+  color: var(--muted-text-color);
 }
 
 .details {
