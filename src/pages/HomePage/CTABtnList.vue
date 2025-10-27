@@ -1,19 +1,13 @@
 <template>
 <ul class="cta-btn-list">
   <li>
-    <CTABtn color="accent" url="/contact" icon="fa-solid fa-envelope">
-      {{ $t('ctaBtns.contact') }}
-    </CTABtn>
+    <ContactCTABtn />
   </li>
   <li>
-    <CTABtn color="primary" url="/courses"  icon="fa-solid fa-book-open">
-      {{ $t('ctaBtns.courses') }}
-    </CTABtn>
+    <CTABtn color="primary" url="/courses"  icon="fa-solid fa-book-open">{{ $t('ctaBtns.courses') }}</CTABtn>
   </li>
   <li>
-    <CTABtn color="primary" url="/projects" icon="fa-solid fa-code" outline>
-      {{ $t('ctaBtns.projects') }}
-    </CTABtn>
+    <CTABtn color="primary" url="/projects" icon="fa-solid fa-code" outline>{{ $t('ctaBtns.projects') }}</CTABtn>
   </li>
 </ul>
 </template>
@@ -22,6 +16,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import CTABtn from '../../components/ui/CTABtn.vue'
+import ContactCTABtn from '../../components/ui/ContactCTABtn.vue'
 
 const { locale } = useI18n()
 

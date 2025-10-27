@@ -4,9 +4,7 @@
   <div class="page-content">
     <p class="summary">{{ $t('coursesPage.summary') }}</p>
     <CourseList :courses />
-    <CTABtn color="accent" url="/contact" icon="fa-solid fa-envelope">
-      {{ $t('ctaBtns.contact') }}
-    </CTABtn>
+    <ContactCTABtn />
     <LinkList />
   </div>
 </div>
@@ -15,7 +13,7 @@
 <script setup>
 import CourseList from './CourseList.vue'
 import LinkList from './LinkList.vue'
-import CTABtn from '../../components/ui/CTABtn.vue'
+import ContactCTABtn from '../../components/ui/ContactCTABtn.vue'
 import { courses } from '../../data/courses'
 </script>
 
