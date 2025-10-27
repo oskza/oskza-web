@@ -47,5 +47,11 @@ select {
   padding: var(--spacing-xs);
   font-size: var(--font-sm);
   background-color: var(--primary-color);
+  border-radius: 3px;
+}
+
+html.light select {
+  background-color: inherit;
+  color: inherit;
 }
 </style>
