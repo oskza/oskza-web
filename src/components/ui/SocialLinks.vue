@@ -26,7 +26,7 @@ const links = [
   },
   {
     name: 'mail',
-    url: `mailto:${profile.email}`,
+    url: `mailto:${profile.email.info}`,
     icon: 'fa-solid fa-envelope-square'
   },
 ]
