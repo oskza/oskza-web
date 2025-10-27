@@ -1,22 +1,17 @@
 <template>
 <ul class="cta-btn-list">
-  <li>
-    <ContactCTABtn />
-  </li>
-  <li>
-    <CTABtn color="primary" url="/courses"  icon="fa-solid fa-book-open">{{ $t('ctaBtns.courses') }}</CTABtn>
-  </li>
-  <li>
-    <CTABtn color="primary" url="/projects" icon="fa-solid fa-code" outline>{{ $t('ctaBtns.projects') }}</CTABtn>
-  </li>
+  <li><ContactCTABtn /></li>
+  <li><CoursesCTABtn /></li>
+  <li><ProjectsCTABtn /></li>
 </ul>
 </template>
 
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import CTABtn from '../../components/ui/CTABtn.vue'
 import ContactCTABtn from '../../components/ui/ContactCTABtn.vue'
+import CoursesCTABtn from './CoursesCTABtn.vue'
+import ProjectsCTABtn from './ProjectsCTABtn.vue'
 
 const { locale } = useI18n()
 
