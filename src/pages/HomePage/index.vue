@@ -51,4 +51,9 @@ import CTABtnList from './CTABtnList.vue'
   flex-direction: column;
   gap: var(--spacing-md);
 }
+
+.resume {
+  display: flex;
+  justify-content: center;
+}
 </style>
