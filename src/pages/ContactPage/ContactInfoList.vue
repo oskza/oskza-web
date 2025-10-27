@@ -7,9 +7,9 @@
     </a>
   </li>
   <li>
-    <a :href="`mailto:${ profile.email }`">
+    <a :href="`mailto:${ profile.email.info }`">
       <font-awesome-icon class="icon" icon="fa-solid fa-envelope" />
-      <span class="text">{{ profile.email }}</span>
+      <span class="text">{{ profile.email.info }}</span>
     </a>
   </li>
   <li>
