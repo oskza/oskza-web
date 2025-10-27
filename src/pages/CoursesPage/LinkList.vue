@@ -12,12 +12,12 @@
       <span class="text">{{ profile.instagram.courses.split('/').pop() }}</span>
     </a>
   </li>
-  <!-- <li>
+  <li>
     <a :href="`mailto:${profile.email.courses}`">
       <font-awesome-icon class="icon" icon="fas fa-envelope" />
       <span class="text">{{ profile.email.courses }}</span>
     </a>
-  </li> -->
+  </li>
 </ul>
 </template>
 
