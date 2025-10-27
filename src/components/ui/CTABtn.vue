@@ -45,7 +45,6 @@ const filteredProps = computed(() => {
 }
 
 .btn-primary:not(.btn-outline) {
-  --primary-color-dark: color-mix(in srgb, var(--primary-color) 80%, black);
   background-color: var(--primary-color-dark);
   border-color: var(--primary-color-dark);
 }
@@ -60,9 +59,7 @@ html.light .btn-primary .icon {
 }
 
 html.light .btn-outline {
-  --primary-color-dark: color-mix(in srgb, var(--primary-color) 93%, white);
-  background-color: var(--primary-color-dark);
-  border-color: var(--primary-color-dark);
-
+  background-color: var(--primary-color-light);
+  border-color: var(--primary-color-light);
 }
 </style>

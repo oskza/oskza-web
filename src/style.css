@@ -54,6 +54,7 @@ html {
   --muted-text-color: rgba(255, 255, 255, .4);
 
   --primary-color: #505050;
+  --primary-color-dark: color-mix(in srgb, var(--primary-color) 80%, black);
   --text-on-primary-color: var(--text-color);
   --muted-text-on-primary-color: var(--muted-text-color);
 
@@ -77,6 +78,7 @@ html.light {
   --muted-text-color: rgba(0, 0, 0, .6);
 
   --primary-color: #102e4a;
+  --primary-color-light: color-mix(in srgb, var(--primary-color) 93%, white);
   --text-on-primary-color: rgba(255, 255, 255, .87);
   --muted-text-on-primary-color: rgba(255, 255, 255, .4);
 
@@ -88,10 +90,6 @@ html.light {
 
   --contact-form-field-bg-color: #fff;
   --contact-form-field-text-color: var(--text-color);
-}
-
-html.light .contact-form .field {
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 *, *::before, *::after { box-sizing: border-box; padding: 0; margin: 0; }
