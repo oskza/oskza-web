@@ -4,10 +4,7 @@ export const projects = [
     slug: 'selfhosted-infrastructure',
     type: 'freelance',
     featured: true,
-    links: {
-      repository: '#',
-      demo: '#'
-    },
+    links: null,
     stack: ['Linux', 'Docker', 'Ansible'],
     categories: ['selfhosted', 'automation']
   },
