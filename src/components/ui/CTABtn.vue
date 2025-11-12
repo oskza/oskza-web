@@ -26,23 +26,16 @@ const filteredProps = computed(() => {
 
 <style scoped>
 .cta-btn {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing-md) var(--spacing-xl);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-3xl);
   font-family: var(--font-stack-mono);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .btn-outline { color: var(--header-text-color); }
-
-.icon {
-  position: absolute;
-  left: var(--spacing-xl);
-  padding-right: var(--spacing-sm);
-  border-right: 1.5px solid var(--border-color);
-}
 
 .btn-primary:not(.btn-outline) {
   background-color: var(--primary-color-dark);

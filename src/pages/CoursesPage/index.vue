@@ -4,7 +4,9 @@
   <div class="page-content">
     <p class="summary">{{ $t('coursesPage.summary') }}</p>
     <CourseList :courses />
-    <ContactCTABtn />
+    <div class="btns">
+      <ContactCTABtn />
+    </div>
     <LinkList />
   </div>
 </div>
@@ -28,8 +30,12 @@ import { courses } from '../../data/courses'
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3xl);
-  padding: 0 var(--spacing-xl) var(--spacing-xl);
+  padding: 0 min(var(--spacing-4xl), 10%) var(--spacing-xl);
 }
 
 .summary { color: var(--muted-text-color); }
+
+@media (min-width: 768px) {
+  .btns { margin-inline: auto; }
+}
 </style>

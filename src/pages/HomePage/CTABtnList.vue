@@ -1,8 +1,16 @@
 <template>
 <ul class="cta-btn-list">
   <li><ContactCTABtn /></li>
-  <li><CoursesCTABtn /></li>
-  <li><ProjectsCTABtn /></li>
+  <li>
+    <CTABtn color="primary" url="/courses"  icon="fa-solid fa-book-open">
+      {{ $t('ctaBtns.courses') }}
+    </CTABtn>
+  </li>
+  <li>
+    <CTABtn color="primary" url="/projects" icon="fa-solid fa-code" outline>
+      {{ $t('ctaBtns.projects') }}
+    </CTABtn>
+  </li>
 </ul>
 </template>
 
@@ -10,8 +18,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ContactCTABtn from '../../components/ui/ContactCTABtn.vue'
-import CoursesCTABtn from './CoursesCTABtn.vue'
-import ProjectsCTABtn from './ProjectsCTABtn.vue'
+import CTABtn from '../../components/ui/CTABtn.vue'
 
 const { locale } = useI18n()
 
@@ -22,6 +29,11 @@ const resumeUrl = computed(() => `/resume_${locale.value}.pdf`)
 .cta-btn-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--spacing-md) var(--spacing-2xl);
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .cta-btn-list { flex-direction: row; }
 }
 </style>

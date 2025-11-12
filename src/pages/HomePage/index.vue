@@ -3,10 +3,10 @@
   <div class="profile">
     <h1 class="name">{{ $t('profile.name') }}</h1>
     <h2 class="position">{{ $t('profile.position') }}</h2>
-  </div>
-  <div class="details">
-    <p class="summary">{{ $t('profile.summary') }}</p>
-    <p class="resume"><ResumeLink /></p>
+    <div class="details">
+      <p class="summary">{{ $t('profile.summary') }}</p>
+      <p class="resume"><ResumeLink /></p>
+    </div>
   </div>
   <CTABtnList />
 </div>
@@ -24,7 +24,7 @@ import CTABtnList from './CTABtnList.vue'
   flex-direction: column;
   justify-content: space-evenly;
   gap: var(--spacing-lg);
-  padding: var(--spacing-3xl) var(--spacing-xl) var(--spacing-xl);
+  padding: var(--spacing-3xl) min(var(--spacing-4xl), 10%) var(--spacing-xl);
 }
 
 .profile {
@@ -48,6 +48,7 @@ import CTABtnList from './CTABtnList.vue'
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
+  margin-top: var(--spacing-2xl);
 }
 
 .resume {

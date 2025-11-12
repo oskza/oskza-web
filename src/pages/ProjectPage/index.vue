@@ -33,8 +33,8 @@ const project = projects.find(project => project.slug === route.params.slug)
 .page-content {
   display: flex;
   flex-direction: column;
-  padding: 0 var(--spacing-xl) var(--spacing-xl);
   gap: var(--spacing-3xl);
+  padding: 0 min(var(--spacing-4xl), 10%) var(--spacing-xl);
 }
 
 .summary {

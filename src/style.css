@@ -79,7 +79,7 @@ html.light {
   --muted-text-color: rgba(0, 0, 0, .6);
 
   --primary-color: #102e4a;
-  --primary-color-light: color-mix(in srgb, var(--primary-color) 93%, white);
+  --primary-color-light: color-mix(in srgb, var(--primary-color) 85%, #fff);
   --text-on-primary-color: rgba(255, 255, 255, .87);
   --muted-text-on-primary-color: rgba(255, 255, 255, .4);
 
