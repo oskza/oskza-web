@@ -14,8 +14,8 @@ const { projects } = defineProps({
 
 <style scoped>
 .project-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-md);
 }
 </style>
