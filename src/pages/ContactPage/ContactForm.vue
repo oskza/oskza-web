@@ -75,9 +75,7 @@ const handleSubmit = async event => {
     form.value = { email: '', subject: '', message: '' }
   } catch (err) {
     status.value = 'error'
-    console.log(err)
-  }
-  finally {
+  } finally {
     loading.value = false
   }
 }
