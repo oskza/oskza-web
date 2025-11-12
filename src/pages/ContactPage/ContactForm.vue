@@ -4,7 +4,14 @@
     <p class="title">{{ $t('contactForm.title') }}</p>
     <p v-if="statusMessage" class="status" :class="statusClass">{{ statusMessage }}</p>
   </div>
-  <form name="contact" @submit.prevent="handleSubmit">
+  <form
+    name="contact"
+    method="post"
+    netlify
+    data-netlify-honeypot="bot-field"
+    @submit.prevent="handleSubmit"
+  >
+    <input type="hidden" name="form-name" value="contact" />
     <div class="fields">
       <input
         type="email"
@@ -53,16 +60,25 @@ const form = ref({ email: '', subject: '', message: '' })
 const loading = ref(false)
 const status = ref('')
 
-const handleSubmit = async () => {
+const handleSubmit = async event => {
   loading.value = true
   status.value = ''
   try {
-    console.log(form.value)
-    await new Promise(resolve => setTimeout(resolve, 500))
+    const response = await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(event.target).toString(),
+    });
+    if (!response.ok)
+      throw new Error(response.status);
     status.value = 'success'
     form.value = { email: '', subject: '', message: '' }
-  } catch (err) { status.value = 'error' }
-  finally { loading.value = false }
+  } catch (err) {
+    status.value = 'error'
+  }
+  finally {
+    loading.value = false
+  }
 }
 
 const statusMessage = computed(() => {
@@ -71,7 +87,8 @@ const statusMessage = computed(() => {
       return t('contactForm.messages.success')
     case 'error':
       return t('contactForm.messages.somethingWentWrongError')
-    default: return ''
+    default:
+      return ''
   }
 })
 
