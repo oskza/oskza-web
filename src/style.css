@@ -33,6 +33,7 @@
   --spacing-xl: 2rem;
   --spacing-2xl: 2.5rem;
   --spacing-3xl: 3rem;
+  --spacing-4xl: 6rem;
 
   font-family: var(--font-stack-sans);
   font-weight: 400;
