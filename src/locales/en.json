@@ -3,14 +3,14 @@
     "name": "Zach Oskoidis",
     "position": "Software Engineer",
     "location": "Ierapetra, Greece",
-    "summary": "Software Engineer focused on web applications, automation, and self-hosted infrastructures. Soon graduating with a BSc in Computer Engineering."
+    "summary": "I build web applications and secure self-hosted infrastructures, and provide private computer science tutoring for university and school students."
   },
   "contactPage": {
     "pageTitle": "Contact"
   },
   "coursesPage": {
     "pageTitle": "CS Courses",
-    "summary": "I teach private Computer Science and Programming lessons, both remotely and at home, for TEI and EPAL students who want support in their field courses or want to strengthen their knowledge in practice."
+    "summary": "I provide private lessons in Computer Science and Programming, online or in person, helping students with course understanding, assignments, and exam preparation."
   },
   "projectsPage": {
     "pageTitle": "Projects"
