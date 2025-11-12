@@ -67,7 +67,7 @@ const handleSubmit = async event => {
     const response = await fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(event.target).toString(),
+      body: new URLSearchParams(new FormData(event.target)).toString(),
     });
     if (!response.ok)
       throw new Error(response.status);
