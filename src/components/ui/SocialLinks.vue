@@ -9,24 +9,24 @@
 </template>
 
 <script setup>
-import { profile } from '../../data/profile'
+import { profileLinks } from '../../data/links'
 
 const links = [
   {
     name: 'linkedin',
-    url: profile.linkedin,
+    url: profileLinks.linkedin,
     icon: 'fa-brands fa-linkedin',
     external: true
   },
   {
     name: 'github',
-    url: profile.github,
+    url: profileLinks.github,
     icon: 'fa-brands fa-github-square',
     external: true
   },
   {
     name: 'mail',
-    url: `mailto:${profile.email.info}`,
+    url: `mailto:${profileLinks.email}`,
     icon: 'fa-solid fa-envelope-square'
   },
 ]

@@ -1,22 +1,22 @@
 <template>
 <ul class="links">
   <li>
-    <a :href="profile.facebook.courses">
+    <a :href="courseLinks.facebook" target="_blank">
       <font-awesome-icon class="icon" icon="fab fa-facebook-square" />
-      <span class="text">{{ profile.facebook.courses.split('/').pop() }}</span>
+      <span class="text">{{ courseLinks.facebook.split('/').pop() }}</span>
     </a>
   </li>
   <li>
-    <a :href="profile.instagram.courses">
+    <a :href="courseLinks.instagram" target="_blank">
       <font-awesome-icon class="icon" icon="fab fa-instagram" />
-      <span class="text">{{ profile.instagram.courses.split('/').pop() }}</span>
+      <span class="text">{{ courseLinks.instagram.split('/').pop() }}</span>
     </a>
   </li>
 </ul>
 </template>
 
 <script setup>
-import { profile } from '../../data/profile'
+import { courseLinks } from '../../data/links'
 </script>
 
 <style scoped>
