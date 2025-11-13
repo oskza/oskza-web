@@ -3,18 +3,16 @@
   <div class="profile">
     <h1 class="name">{{ $t('profile.name') }}</h1>
     <h2 class="position">{{ $t('profile.position') }}</h2>
-    <div class="details">
-      <p class="summary">{{ $t('profile.summary') }}</p>
-      <p class="resume"><ResumeLink /></p>
-    </div>
+    <p class="summary">{{ $t('profile.summary') }}</p>
+    <ResumeLink />
   </div>
-  <CTABtnList />
+  <CTABtns />
 </div>
 </template>
 
 <script setup>
 import ResumeLink from './ResumeLink.vue'
-import CTABtnList from './CTABtnList.vue'
+import CTABtns from './CTABtnList.vue'
 </script>
 
 <style scoped>
@@ -24,13 +22,11 @@ import CTABtnList from './CTABtnList.vue'
   flex-direction: column;
   justify-content: space-evenly;
   gap: var(--spacing-lg);
-  padding: var(--spacing-3xl) min(var(--spacing-4xl), 10%) var(--spacing-xl);
 }
 
-.profile {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
+.name,
+.summary {
+  margin-bottom: var(--spacing-md);
 }
 
 .name {
@@ -39,20 +35,9 @@ import CTABtnList from './CTABtnList.vue'
 }
 
 .position {
+  margin-bottom: var(--spacing-3xl);
   font-size: var(--font-xl);
   line-height: 1.7rem;
   color: var(--muted-text-color);
-}
-
-.details {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-2xl);
-}
-
-.resume {
-  display: flex;
-  justify-content: center;
 }
 </style>

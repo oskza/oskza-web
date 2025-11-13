@@ -25,7 +25,11 @@ const route = useRoute()
 
 .main-content {
   flex: 1;
+  align-self: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  padding: var(--spacing-3xl) var(--spacing-2xl) var(--spacing-xl);
 }
 </style>

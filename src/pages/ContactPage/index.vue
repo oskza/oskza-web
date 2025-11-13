@@ -17,13 +17,13 @@ import ContactForm from './ContactForm.vue'
 .page-title {
   font-size: var(--font-4xl);
   line-height: 2.75rem;
-  padding: var(--spacing-3xl) var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
 }
 
 .page-content {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xl);
-  padding: 0 var(--spacing-sm) var(--spacing-xl);
+  margin-inline: calc(-1 * var(--spacing-xl));
 }
 </style>

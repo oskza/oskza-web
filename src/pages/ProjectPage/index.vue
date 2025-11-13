@@ -27,17 +27,15 @@ const project = projects.find(project => project.slug === route.params.slug)
 .page-title {
   font-size: var(--font-4xl);
   line-height: 2.75rem;
-  padding: var(--spacing-3xl) var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
 }
 
 .page-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--spacing-3xl);
-  padding: 0 min(var(--spacing-4xl), 10%) var(--spacing-xl);
 }
 
-.summary {
-  color: var(--muted-text-color);
-}
+.summary { color: var(--muted-text-color); }
 </style>

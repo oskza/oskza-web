@@ -48,13 +48,12 @@ const filteredProjects = computed(() => {
 .page-title {
   font-size: var(--font-4xl);
   line-height: 2.75rem;
-  padding: var(--spacing-3xl) var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .page-options {
   display: flex;
   justify-content: space-between;
-  padding: 0 min(var(--spacing-4xl), 10%);
   margin-bottom: var(--spacing-sm);
   font-size: var(--font-sm);
   color: var(--muted-text-color);
@@ -64,6 +63,5 @@ const filteredProjects = computed(() => {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3xl);
-  padding: 0 min(var(--spacing-4xl), 10%) var(--spacing-xl);
 }
 </style>
