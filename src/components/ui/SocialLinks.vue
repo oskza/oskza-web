@@ -14,7 +14,7 @@ import { profile } from '../../data/profile'
 const links = [
   {
     name: 'linkedin',
-    url: profile.github,
+    url: profile.linkedin,
     icon: 'fa-brands fa-linkedin',
     external: true
   },
