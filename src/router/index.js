@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import DefaultLayout from '../layouts/DefaultLayout.vue'
 import Home from '../views/Home.vue'
 import Contact from '../views/Contact.vue'
@@ -21,22 +22,56 @@ const routes = [
       {
         path: 'contact',
         name: 'contact',
-        component: Contact
+        component: Contact,
+        meta: {
+          breadcrumbs: [
+            { label: 'Home', to: '/' },
+            { label: 'Contact' }
+          ]
+        }
       },
       {
         path: 'courses',
         name: 'courses',
-        component: Courses
+        component: Courses,
+        meta: {
+          breadcrumbs: [
+            { label: 'Home', to: '/' },
+            { label: 'Courses' }
+          ]
+        }
       },
       {
         path: 'projects',
         name: 'projects',
-        component: Projects
+        component: Projects,
+        meta: {
+          breadcrumbs: [
+            { label: 'Home', to: '/' },
+            { label: 'Projects' }
+          ]
+        }
       },
       {
         path: "projects/:slug",
         name: "project",
         component: Project,
+        meta: {
+          breadcrumbs: (route, i18n) => {
+
+            const project = projects.find(p => p.slug === route.params.slug)
+
+            const title = project
+              ? i18n.t(`projects.${ project.id }.title`)
+              : route.params.slug
+
+            return [
+              { label: 'Home', to: '/' },
+              { label: 'Projects', to: '/projects' },
+              { label: title }
+            ]
+          }
+        },
         beforeEnter: (to, from, next) => {
           if (projects.some(p => p.slug === to.params.slug))
             next()

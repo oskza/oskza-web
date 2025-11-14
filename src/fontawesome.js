@@ -5,7 +5,7 @@ import {
   faArrowUp, faArrowLeft, faArrowRight, faFilePdf,
   faEnvelope, faEnvelopeSquare, faCode, faBookOpen,
   faSun, faMoon, faLink, faSliders, faCircleCheck,
-  faXmark, faLocationDot, faPaperPlane
+  faXmark, faLocationDot, faPaperPlane, faHouse
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -16,7 +16,7 @@ import {
 library.add(faArrowUp, faArrowLeft, faArrowRight, faFilePdf,
             faEnvelope, faEnvelopeSquare, faCode, faBookOpen,
             faSun, faMoon, faLink, faSliders, faCircleCheck,
-            faXmark, faLocationDot, faPaperPlane,
+            faXmark, faLocationDot, faPaperPlane, faHouse,
             faGithub, faGithubSquare, faLinkedin,
             faFacebookSquare, faInstagram)
 

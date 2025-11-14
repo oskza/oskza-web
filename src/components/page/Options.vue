@@ -4,9 +4,10 @@
 
 <style scoped>
 .page-options {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: var(--spacing-md);
+  justify-content: center;
+  margin-bottom: var(--spacing-2xl);
   font-size: var(--font-sm);
   color: var(--muted-text-color);
 }

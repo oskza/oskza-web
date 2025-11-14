@@ -30,6 +30,6 @@ const route = useRoute()
   flex-direction: column;
   width: 100%;
   max-width: 1100px;
-  padding: var(--spacing-3xl) var(--spacing-2xl) var(--spacing-xl);
+  padding: var(--spacing-xl) var(--spacing-2xl);
 }
 </style>

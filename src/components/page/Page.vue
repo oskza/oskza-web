@@ -1,7 +1,8 @@
 <template>
 <div class="page">
   <Options>
-    <GoBackBtn />
+    <!-- <GoBackBtn /> -->
+    <Breadcrumbs :items="breadcrumbs" />
     <slot name="options"></slot>
   </Options>
   <Title><slot name="title"></slot></Title>
@@ -10,9 +11,21 @@
 </template>
 
 <script setup>
+import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import Title from './Title.vue'
 import Options from './Options.vue'
-import GoBackBtn from '../ui/GoBackBtn.vue'
+import Breadcrumbs from '../ui/Breadcrumbs.vue'
+
+const route = useRoute()
+const { t } = useI18n()
+
+const lastMatch = route.matched[route.matched.length - 1]
+
+const breadcrumbs =
+  typeof lastMatch.meta.breadcrumbs === 'function'
+    ? lastMatch.meta.breadcrumbs(route, { t })
+    : lastMatch.meta.breadcrumbs ?? []
 </script>
 
 <style scoped>
