@@ -22,7 +22,7 @@ const { items } = defineProps({
 
 const renderedItems = computed(() =>
   items.map(item => {
-    return (item.label === 'Home')
+    return (item.label === 'home')
       ? { ...item, isHome: true, label: '' }
       : { ...item, isHome: false };
   })

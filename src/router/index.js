@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { useI18n } from 'vue-i18n'
 import DefaultLayout from '../layouts/DefaultLayout.vue'
 import Home from '../views/Home.vue'
 import Contact from '../views/Contact.vue'
@@ -13,20 +12,15 @@ const routes = [
     path: '/',
     component: DefaultLayout,
     children: [
-      {
-        path: '',
-        name: 'home',
-        component: Home,
-        meta: { hideFooter: true }
-      },
+      { path: '', name: 'home', component: Home, meta: { hideFooter: true } },
       {
         path: 'contact',
         name: 'contact',
         component: Contact,
         meta: {
           breadcrumbs: [
-            { label: 'Home', to: '/' },
-            { label: 'Contact' }
+            { labelKey: 'home', to: '/' },
+            { labelKey: 'contactPage.pageTitle' }
           ]
         }
       },
@@ -36,8 +30,8 @@ const routes = [
         component: Courses,
         meta: {
           breadcrumbs: [
-            { label: 'Home', to: '/' },
-            { label: 'Courses' }
+            { label: 'home', to: '/' },
+            { labelKey: 'coursesPage.pageTitle' }
           ]
         }
       },
@@ -47,46 +41,38 @@ const routes = [
         component: Projects,
         meta: {
           breadcrumbs: [
-            { label: 'Home', to: '/' },
-            { label: 'Projects' }
+            { labelKey: 'home', to: '/' },
+            { labelKey: 'projectsPage.pageTitle' }
           ]
         }
       },
       {
-        path: "projects/:slug",
-        name: "project",
+        path: 'projects/:slug',
+        name: 'project',
         component: Project,
         meta: {
-          breadcrumbs: (route, i18n) => {
-
+          breadcrumbs: (route) => {
             const project = projects.find(p => p.slug === route.params.slug)
-
-            const title = project
-              ? i18n.t(`projects.${ project.id }.title`)
-              : route.params.slug
-
             return [
-              { label: 'Home', to: '/' },
-              { label: 'Projects', to: '/projects' },
-              { label: title }
+              { labelKey: 'home', to: '/' },
+              { labelKey: 'projectsPage.pageTitle', to: '/projects' },
+              { label: project ? project.id : route.params.slug }
             ]
           }
         },
         beforeEnter: (to, from, next) => {
-          if (projects.some(p => p.slug === to.params.slug))
-            next()
-          else
-            next('/')
+          if (projects.some(p => p.slug === to.params.slug)) next()
+          else next('/')
         }
       }
     ]
   },
-  {
-    path: '/:pathMatch(.*)*',
-    redirect: '/'
-  }
+  { path: '/:pathMatch(.*)*', redirect: '/' }
 ]
 
-const router = createRouter({ history: createWebHistory(), routes })
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+})
 
 export default router
