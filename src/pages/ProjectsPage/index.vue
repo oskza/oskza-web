@@ -1,24 +1,21 @@
 <template>
-<div class="projects-page">
-  <h2 class="page-title">{{ $t('projectsPage.pageTitle') }}</h2>
-  <div class="page-options">
-    <GoBackBtn />
+<Page class="projects-page">
+  <template #options>
     <ToggleFiltersBtn v-model="filtersVisible" />
-  </div>
-  <div class="page-content">
-    <Filters v-show="filtersVisible" />
-    <List :projects="filteredProjects" />
-  </div>
-</div>
+  </template>
+  <template #title>{{ $t(`projectsPage.pageTitle`) }}</template>
+  <Filters v-show="filtersVisible" />
+  <List :projects="filteredProjects" />
+</Page>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
+import Page from '../../components/page/Page.vue'
 import ToggleFiltersBtn from './ToggleFiltersBtn.vue'
 import Filters from './Filters.vue'
 import List from '../../components/project/List.vue'
-import GoBackBtn from '../../components/ui/GoBackBtn.vue'
 import { projects as allProjects } from '../../data/projects'
 
 const route = useRoute()
@@ -43,25 +40,3 @@ const filteredProjects = computed(() => {
   });
 })
 </script>
-
-<style scoped>
-.page-title {
-  font-size: var(--font-4xl);
-  line-height: 2.75rem;
-  margin-bottom: var(--spacing-xl);
-}
-
-.page-options {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: var(--spacing-sm);
-  font-size: var(--font-sm);
-  color: var(--muted-text-color);
-}
-
-.page-content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-3xl);
-}
-</style>

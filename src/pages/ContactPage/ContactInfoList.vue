@@ -35,7 +35,7 @@ import { profileLinks } from '../../data/links'
 }
 
 a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: var(--spacing-2xs);
 }

@@ -1,26 +1,21 @@
 <template>
-<div class="contact-page">
-  <h2 class="page-title">{{ $t(`contactPage.pageTitle`) }}</h2>
-  <div class="page-content">
+<Page class="contact-page">
+  <template #title>{{ $t("contactPage.pageTitle") }}</template>
+  <div class="wrapper">
     <ContactInfoList />
     <ContactForm />
   </div>
-</div>
+</Page>
 </template>
 
 <script setup>
+import Page from '../../components/page/Page.vue'
 import ContactInfoList from './ContactInfoList.vue'
 import ContactForm from './ContactForm.vue'
 </script>
 
 <style scoped>
-.page-title {
-  font-size: var(--font-4xl);
-  line-height: 2.75rem;
-  margin-bottom: var(--spacing-3xl);
-}
-
-.page-content {
+.wrapper {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xl);

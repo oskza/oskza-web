@@ -24,7 +24,6 @@ const { features } = defineProps({
   gap: var(--spacing-2xs);
   margin: 0 auto;
   text-align: start;
-  font-size: var(--font-sm);
 }
 
 li {
