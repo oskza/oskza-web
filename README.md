@@ -19,6 +19,7 @@ Personal portfolio website
 - **Vue Router** – client-side routing
 - **Vue I18n** – internationalization
 - **Netlify** – deployment and contact form handling
+- **Axios** – HTTP client for form submissions and API requests
 - **FontAwesome** – icons for UI and social links
 
 ---

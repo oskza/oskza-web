@@ -51,30 +51,35 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import axios from 'axios'
 import SubmitBtn from './SubmitBtn.vue'
 
 const { t } = useI18n()
 
 const form = ref({ email: '', subject: '', message: '' })
-
 const loading = ref(false)
 const status = ref('')
 
 const handleSubmit = async event => {
   loading.value = true
   status.value = ''
+
   try {
-    const response = await fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(new FormData(event.target)).toString(),
-    });
-    if (!response.ok)
-      throw new Error(response.status);
+    const formData = new FormData(event.target)
+    const payload = new URLSearchParams(formData).toString()
+
+    const response = await axios.post('/', payload, {
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    })
+
+    if (response.status !== 200)
+      throw new Error(response.status)
+
     status.value = 'success'
     form.value = { email: '', subject: '', message: '' }
   } catch (err) {
     status.value = 'error'
+    console.error(err)
   } finally {
     loading.value = false
   }
