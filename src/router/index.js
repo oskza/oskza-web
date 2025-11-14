@@ -5,6 +5,7 @@ import Contact from '../views/Contact.vue'
 import Courses from '../views/Courses.vue'
 import Projects from '../views/Projects.vue'
 import Project from '../views/Project.vue'
+import { projects } from '../data/projects'
 
 const routes = [
   {
@@ -36,8 +37,18 @@ const routes = [
         path: "projects/:slug",
         name: "project",
         component: Project,
+        beforeEnter: (to, from, next) => {
+          if (projects.some(p => p.slug === to.params.slug))
+            next()
+          else
+            next('/')
+        }
       }
     ]
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/'
   }
 ]
 

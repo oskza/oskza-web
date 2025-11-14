@@ -20,6 +20,7 @@ import LinksSection from './LinksSection.vue'
 import { projects } from '../../data/projects'
 
 const route = useRoute()
+
 const project = projects.find(project => project.slug === route.params.slug)
 </script>
 
