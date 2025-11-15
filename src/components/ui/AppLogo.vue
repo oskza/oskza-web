@@ -11,7 +11,7 @@ import InternalLink from './InternalLink.vue'
 <style scoped>
 .logo {
   font-family: var(--font-stack-mono);
-  font-size: var(--font-xl);
+  font-size: var(--font-lg);
   font-weight: 600;
   letter-spacing: .125rem;
   color: var(--text-color);

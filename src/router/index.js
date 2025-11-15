@@ -12,7 +12,11 @@ const routes = [
     path: '/',
     component: DefaultLayout,
     children: [
-      { path: '', name: 'home', component: Home, meta: { hideFooter: true } },
+      {
+        path: '',
+        name: 'home',
+        component: Home
+      },
       {
         path: 'contact',
         name: 'contact',
@@ -65,7 +69,10 @@ const routes = [
       }
     ]
   },
-  { path: '/:pathMatch(.*)*', redirect: '/' }
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/'
+  }
 ]
 
 const router = createRouter({

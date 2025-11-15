@@ -1,10 +1,7 @@
 <template>
 <div class="page">
-  <Options>
-    <Breadcrumbs :items="translatedBreadcrumbs" />
-    <slot name="options"></slot>
-  </Options>
-  <Title><slot name="title"></slot></Title>
+  <h2 class="page-title"><slot name="title"></slot></h2>
+  <div class="page-options"><slot name="options"></slot></div>
   <div class="page-content"><slot></slot></div>
 </div>
 </template>
@@ -14,9 +11,6 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { projects } from '../../data/projects'
-import Title from './Title.vue'
-import Options from './Options.vue'
-import Breadcrumbs from '../ui/Breadcrumbs.vue'
 
 const route = useRoute()
 const { t, locale } = useI18n()
@@ -25,20 +19,18 @@ const lastMatch = computed(() => route.matched[route.matched.length - 1])
 
 const translatedBreadcrumbs = computed(() => {
   const raw = typeof lastMatch.value.meta.breadcrumbs === 'function'
-    ? lastMatch.value.meta.breadcrumbs(route)
-    : lastMatch.value.meta.breadcrumbs ?? []
+              ? lastMatch.value.meta.breadcrumbs(route)
+              : lastMatch.value.meta.breadcrumbs ?? []
 
   return raw.map(item => {
-    let label = item.labelKey ? t(item.labelKey) : item.label
+    let label = item.labelKey
+                ? t(item.labelKey)
+                : item.label
 
-    if (projects.some(p => p.id === label)) {
+    if (projects.some(p => p.id === label))
       label = t(`projects.${label}.title`)
-    }
 
-    return {
-      ...item,
-      label
-    }
+    return { ...item, label }
   })
 })
 </script>
@@ -47,11 +39,25 @@ const translatedBreadcrumbs = computed(() => {
 .page {
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-lg);
 }
 
 .page-content {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3xl);
+}
+
+.page-title {
+  font-size: var(--font-4xl);
+  line-height: 2.75rem;
+}
+
+.page-options {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  font-size: var(--font-sm);
+  color: var(--muted-text-color);
 }
 </style>

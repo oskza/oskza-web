@@ -109,7 +109,6 @@ const statusClass = computed(() => ({
   gap: var(--spacing-xl);
   width: 100%;
   max-width: 550px;
-  margin-inline: auto;
   padding: var(--spacing-xl) var(--spacing-md);
   border-radius: 3px;
   background-color: var(--contact-form-bg-color);

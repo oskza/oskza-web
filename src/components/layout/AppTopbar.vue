@@ -16,6 +16,7 @@ import AppSettings from './AppSettings.vue'
 .topbar {
   display: flex;
   justify-content: space-between;
+  gap: var(--spacing-xs);
   padding-block: var(--spacing-2xs);
   color: var(--primary-color);
 }

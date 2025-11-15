@@ -37,7 +37,7 @@ const links = [
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
-  font-size: var(--font-3xl);
+  font-size: var(--font-2xl);
 }
 
 a { display: flex; }

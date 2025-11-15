@@ -19,6 +19,7 @@ import ContactForm from './ContactForm.vue'
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xl);
-  margin-inline: calc(-1 * var(--spacing-xl));
+  align-items: center;
+  margin-inline: calc(-1 * var(--spacing-lg));
 }
 </style>
