@@ -3,7 +3,7 @@
   <li v-for="(item, i) in renderedItems" :key="i">
     <router-link v-if="item.to" :to="item.to">
       <font-awesome-icon v-if="item.isHome" class="icon" icon="fa-solid fa-house" />
-      <span v-else>{{ item.label }}</span>
+      <span v-else class="text">{{ item.label }}</span>
     </router-link>
     <span v-else class="current">{{ item.label }}</span>
   </li>

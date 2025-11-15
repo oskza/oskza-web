@@ -51,18 +51,16 @@ const routes = [
         name: 'project',
         component: Project,
         meta: {
-          breadcrumbs: (route) => {
-            const project = projects.find(p => p.slug === route.params.slug)
-            return [
-              { labelKey: 'home', to: '/' },
-              { labelKey: 'projectsPage.pageTitle', to: '/projects' },
-              { label: project ? project.id : route.params.slug }
-            ]
-          }
+          breadcrumbs: [
+            { labelKey: 'home', to: '/' },
+            { labelKey: 'projectsPage.pageTitle', to: '/projects' }
+          ]
         },
         beforeEnter: (to, from, next) => {
-          if (projects.some(p => p.slug === to.params.slug)) next()
-          else next('/')
+          if (projects.some(p => p.slug === to.params.slug))
+            next()
+          else
+            next('/')
         }
       }
     ]
