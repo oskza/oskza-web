@@ -34,8 +34,9 @@ const shortDescr = (text, limit = 15) => {
 .project-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: var(--spacing-md);
-  padding: 2rem 1rem;
+  padding: var(--spacing-xl) var(--spacing-md);
   font-size: .9rem;
   border: 1px solid var(--border-color);
   border-radius: 3px;
