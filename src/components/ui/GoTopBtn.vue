@@ -1,6 +1,6 @@
 <template>
 <AppBtn class="btn-go-top" color="primary" outline :onClick="scrollToTop">
-  <font-awesome-icon icon="fa-solid fa-arrow-up" />
+  <font-awesome-icon class="icon" icon="fa-solid fa-arrow-up" />
 </AppBtn>
 </template>
 
@@ -11,7 +11,7 @@ const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 </script>
 
 <style scoped>
-.btn-go-top { padding: var(--spacing-2xs) var(--spacing-sm); }
+.btn-go-top { padding: var(--spacing-2xs) var(--spacing-md); }
 
 html.light .btn-go-top {
   border: none;

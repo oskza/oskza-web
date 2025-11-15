@@ -1,7 +1,7 @@
 <template>
 <AppBtn class="btn-submit" color="accent" pill>
-  <font-awesome-icon icon="fa-solid fa-paper-plane" />
-  {{ $t('contactForm.submit') }}
+  <font-awesome-icon class="icon" icon="fa-solid fa-paper-plane" />
+  <span class="text">{{ $t('contactForm.submit') }}</span>
 </AppBtn>
 </template>
 
@@ -10,5 +10,10 @@ import AppBtn from '../../components/ui/AppBtn.vue'
 </script>
 
 <style scoped>
-.btn-submit { padding: var(--spacing-sm) var(--spacing-3xl); }
+.btn-submit {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2xs);
+  padding: var(--spacing-sm) var(--spacing-2xl);
+}
 </style>

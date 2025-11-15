@@ -21,23 +21,12 @@ import { courseLinks } from '../../data/links'
 
 <style scoped>
 .links {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-2xs);
   font-size: var(--font-sm);
+  line-height: 1.5rem;
 }
 
-li {
-  display: flex;
-  justify-content: center;
+.icon {
+  color: var(--primary-color);
+  margin-inline-end: var(--spacing-xs);
 }
-
-a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--spacing-3xs);
-}
-
-.icon { color: var(--primary-color); }
 </style>

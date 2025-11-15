@@ -16,8 +16,7 @@ const { locale } = useI18n()
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-3xs);
-  padding: var(--spacing-2xs);
+  gap: var(--spacing-2xs);
   font-family: var(--font-stack-mono);
   font-size: var(--font-sm);
   font-weight: 600;

@@ -19,18 +19,15 @@ const { features } = defineProps({
 
 <style scoped>
 .feature-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-2xs);
-  margin: 0 auto;
+  margin-inline: auto;
   text-align: start;
+  line-height: 1.75rem;
 }
 
 li {
   display: flex;
   align-items: baseline;
   gap: var(--spacing-2xs);
-
 }
 
 .icon { color: var(--primary-color); }

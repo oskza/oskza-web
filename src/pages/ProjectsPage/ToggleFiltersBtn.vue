@@ -18,10 +18,9 @@ const toggleFiltersVisibility = () => emit('update:modelValue', !props.modelValu
 <style scoped>
 .btn-toggle-filters {
   position: absolute;
-  right: 0;
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-3xs);
+  inset-inline-end: 0;
   color: inherit;
 }
+
+.icon { margin-inline-end: var(--spacing-3xs); }
 </style>

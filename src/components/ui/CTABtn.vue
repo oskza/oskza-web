@@ -29,7 +29,7 @@ const filteredProps = computed(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
   padding: var(--spacing-md) var(--spacing-3xl);
   font-family: var(--font-stack-mono);
   font-weight: 800;

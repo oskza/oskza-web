@@ -27,17 +27,15 @@ import { profileLinks } from '../../data/links'
 
 <style scoped>
 .contact-info-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-2xs);
-  margin: 0 auto;
+  margin-inline: auto;;
   text-align: start;
+  line-height: 1.75rem;
 }
 
 a {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-2xs);
+  gap: var(--spacing-xs);
 }
 
 .icon { color: var(--primary-color); }

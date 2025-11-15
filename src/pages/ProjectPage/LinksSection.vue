@@ -2,12 +2,16 @@
 <AppSection v-if="Object.keys(links).length" class="links" :title="$t('projectPage.sectionTitles.links')">
   <ul class="link-list">
     <li v-if="links.repository">
-      <font-awesome-icon class="icon" icon="fa-brands fa-github" />
-      <a :href="links.repository" target="_blank">{{ $t('projectPage.links.repository') }}</a>
+      <a :href="links.repository" target="_blank">
+        <font-awesome-icon class="icon" icon="fa-brands fa-github" />
+        <span class="text">{{ $t('projectPage.links.repository') }}</span>
+      </a>
     </li>
     <li v-if="links.demo">
-      <font-awesome-icon class="icon" icon="fas fa-link" />
-      <a :href="links.demo" target="_blank">{{ $t('projectPage.links.demo') }}</a>
+      <a :href="links.demo" target="_blank">
+        <font-awesome-icon class="icon" icon="fas fa-link" />
+        <span class="text">{{ $t('projectPage.links.demo') }}</span>
+      </a>
     </li>
   </ul>
 </AppSection>
@@ -16,14 +20,12 @@
 <script setup>
 import AppSection from '../../components/layout/AppSection.vue'
 
-const { links } = defineProps({
-  links: { type: Object, required: true }
-})
+const { links } = defineProps({ links: { type: Object, required: true } })
 </script>
 
 <style scoped>
-li {
-  display: flex;
+a {
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: var(--spacing-2xs);
