@@ -6,6 +6,6 @@
 .page-title {
   font-size: var(--font-4xl);
   line-height: 2.75rem;
-  margin-bottom: var(--spacing-3xl);
+  margin-block-end: var(--spacing-3xl);
 }
 </style>

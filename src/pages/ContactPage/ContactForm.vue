@@ -151,7 +151,7 @@ textarea {
 }
 
 .status {
-  margin-top: var(--spacing-xs);
+  margin-block-start: var(--spacing-xs);
   font-size: var(--font-sm);
 }
 

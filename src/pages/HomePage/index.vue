@@ -26,7 +26,7 @@ import CTABtns from './CTABtnList.vue'
 
 .name,
 .summary {
-  margin-bottom: var(--spacing-md);
+  margin-block-end: var(--spacing-md);
 }
 
 .name {
@@ -35,7 +35,7 @@ import CTABtns from './CTABtnList.vue'
 }
 
 .position {
-  margin-bottom: var(--spacing-3xl);
+  margin-block-end: var(--spacing-3xl);
   font-size: var(--font-xl);
   line-height: 1.7rem;
   color: var(--muted-text-color);
