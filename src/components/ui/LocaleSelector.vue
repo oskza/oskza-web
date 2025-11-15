@@ -25,7 +25,8 @@ const changeLang = lang => locale.value = lang
 <style scoped>
 .locale-selector {
   display: flex;
-  font-size: var(--font-xs);
+  align-items: center;
+  font-size: var(--font-sm);
 }
 
 li:not(:last-child)::after {

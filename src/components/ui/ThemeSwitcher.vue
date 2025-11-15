@@ -1,6 +1,6 @@
 <template>
 <AppBtn class="theme-switcher" color="plain" :onClick="toggleTheme">
-  <font-awesome-icon :icon="isDark ? 'fas fa-moon' : 'fas fa-sun'" />
+  <font-awesome-icon class="icon" :icon="isDark ? 'fas fa-moon' : 'fas fa-sun'" />
 </AppBtn>
 </template>
 
@@ -34,8 +34,7 @@ onMounted(() => {
 
 <style scoped>
 .theme-switcher {
-  display: inline-block;
-  font-size: var(--font-sm);
+  font-size: var(--font-md);
   color: var(--accent-color);
   transition: transform 0.2s ease;
 }
