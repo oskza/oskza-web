@@ -2,7 +2,7 @@
 <ul class="social-links">
   <li v-for="link in links" :key="link.name">
     <a :href="link.url" :target="link.external ? '_blank' : null">
-      <font-awesome-icon :icon="link.icon" />
+      <font-awesome-icon class="icon" :icon="link.icon" />
     </a>
   </li>
 </ul>
@@ -15,7 +15,7 @@ const links = [
   {
     name: 'linkedin',
     url: profileLinks.linkedin,
-    icon: 'fa-brands fa-linkedin',
+    icon: 'fa-brands fa-square-linkedin',
     external: true
   },
   {
@@ -35,7 +35,9 @@ const links = [
 <style scoped>
 .social-links {
   display: flex;
-  font-size: var(--font-xl);
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-3xl);
 }
 
 a { display: flex; }
