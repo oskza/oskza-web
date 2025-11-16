@@ -2,10 +2,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import {
-  faArrowUp, faArrowLeft, faArrowRight, faFilePdf,
-  faEnvelope, faEnvelopeSquare, faCode, faBookOpen,
-  faSun, faMoon, faLink, faSliders, faCircleCheck,
-  faXmark, faLocationDot, faPaperPlane, faHouse
+  faEnvelope, faEnvelopeSquare, faPaperPlane,
+  faFilePdf, faBookOpen, faLink, faCircleCheck,
+  faXmark, faSliders, faTrashCan, faCode,
+  faLocationDot, faSun, faMoon
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -14,11 +14,12 @@ import {
   faFacebookSquare, faInstagram
 } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faArrowUp, faArrowLeft, faArrowRight, faFilePdf,
-            faEnvelope, faEnvelopeSquare, faCode, faBookOpen,
-            faSun, faMoon, faLink, faSliders, faCircleCheck,
-            faXmark, faLocationDot, faPaperPlane, faHouse,
-            faGithub, faGithubSquare, faLinkedin, faSquareLinkedin,
+library.add(faEnvelope, faEnvelopeSquare, faPaperPlane,
+            faFilePdf, faBookOpen, faLink, faCircleCheck,
+            faXmark, faSliders, faTrashCan, faCode,
+            faLocationDot, faSun, faMoon,
+            faGithub, faGithubSquare,
+            faLinkedin, faSquareLinkedin,
             faFacebookSquare, faInstagram)
 
 export { FontAwesomeIcon }
