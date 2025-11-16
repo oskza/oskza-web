@@ -10,5 +10,5 @@ import { FontAwesomeIcon } from './fontawesome'
 createApp(App)
   .use(router)
   .use(i18n)
-  .component('font-awesome-icon', FontAwesomeIcon)
+  .component('fa-icon', FontAwesomeIcon)
   .mount('#app')
