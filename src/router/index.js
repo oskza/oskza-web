@@ -12,59 +12,17 @@ const routes = [
     path: '/',
     component: DefaultLayout,
     children: [
-      {
-        path: '',
-        name: 'home',
-        component: Home
-      },
-      {
-        path: 'contact',
-        name: 'contact',
-        component: Contact,
-        meta: {
-          breadcrumbs: [
-            { labelKey: 'home', to: '/' },
-            { labelKey: 'contactPage.pageTitle' }
-          ]
-        }
-      },
-      {
-        path: 'courses',
-        name: 'courses',
-        component: Courses,
-        meta: {
-          breadcrumbs: [
-            { label: 'home', to: '/' },
-            { labelKey: 'coursesPage.pageTitle' }
-          ]
-        }
-      },
-      {
-        path: 'projects',
-        name: 'projects',
-        component: Projects,
-        meta: {
-          breadcrumbs: [
-            { labelKey: 'home', to: '/' },
-            { labelKey: 'projectsPage.pageTitle' }
-          ]
-        }
-      },
+      { path: '', name: 'home', component: Home },
+      { path: 'contact', name: 'contact', component: Contact },
+      { path: 'courses', name: 'courses', component: Courses },
+      { path: 'projects', name: 'projects', component: Projects },
       {
         path: 'projects/:slug',
         name: 'project',
         component: Project,
-        meta: {
-          breadcrumbs: [
-            { labelKey: 'home', to: '/' },
-            { labelKey: 'projectsPage.pageTitle', to: '/projects' }
-          ]
-        },
         beforeEnter: (to, from, next) => {
-          if (projects.some(p => p.slug === to.params.slug))
-            next()
-          else
-            next('/')
+          if (projects.some(p => p.slug === to.params.slug)) next()
+          else next('/')
         }
       }
     ]
@@ -75,9 +33,6 @@ const routes = [
   }
 ]
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes
-})
+const router = createRouter({ history: createWebHistory(), routes })
 
 export default router
