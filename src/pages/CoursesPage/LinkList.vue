@@ -2,13 +2,13 @@
 <ul class="links">
   <li>
     <a :href="courseLinks.facebook" target="_blank">
-      <font-awesome-icon class="icon" icon="fab fa-facebook-square" />
+      <fa-icon class="icon" icon="fab fa-facebook-square" />
       <span class="text">{{ courseLinks.facebook.split('/').pop() }}</span>
     </a>
   </li>
   <li>
     <a :href="courseLinks.instagram" target="_blank">
-      <font-awesome-icon class="icon" icon="fab fa-instagram" />
+      <fa-icon class="icon" icon="fab fa-instagram" />
       <span class="text">{{ courseLinks.instagram.split('/').pop() }}</span>
     </a>
   </li>

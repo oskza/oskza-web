@@ -2,19 +2,19 @@
 <ul class="contact-info-list">
   <li>
     <a :href="profileLinks.locationMap" target="_blank">
-      <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
+      <fa-icon class="icon" icon="fa-solid fa-location-dot" />
       <span class="text">{{ $t('profile.location') }}</span>
     </a>
   </li>
   <li>
     <a :href="`mailto:${ profileLinks.email }`">
-      <font-awesome-icon class="icon" icon="fa-solid fa-envelope" />
+      <fa-icon class="icon" icon="fa-solid fa-envelope" />
       <span class="text">{{ profileLinks.email }}</span>
     </a>
   </li>
   <li>
     <a :href="profileLinks.linkedin" target="_blank">
-      <font-awesome-icon class="icon" icon="fa-brands fa-linkedin" />
+      <fa-icon class="icon" icon="fa-brands fa-linkedin" />
       <span class="text">{{ profileLinks.linkedin.split('://').pop() }}</span>
     </a>
   </li>

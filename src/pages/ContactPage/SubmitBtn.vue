@@ -1,6 +1,6 @@
 <template>
 <AppBtn class="btn-submit" color="accent" pill>
-  <font-awesome-icon class="icon" icon="fa-solid fa-paper-plane" />
+  <fa-icon class="icon" icon="fa-solid fa-paper-plane" />
   <span class="text">{{ $t('contactForm.submit') }}</span>
 </AppBtn>
 </template>

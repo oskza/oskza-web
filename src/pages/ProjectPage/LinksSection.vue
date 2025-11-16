@@ -3,13 +3,13 @@
   <ul class="link-list">
     <li v-if="links.repository">
       <a :href="links.repository" target="_blank">
-        <font-awesome-icon class="icon" icon="fa-brands fa-github" />
+        <fa-icon class="icon" icon="fa-brands fa-github" />
         <span class="text">{{ $t('projectPage.links.repository') }}</span>
       </a>
     </li>
     <li v-if="links.demo">
       <a :href="links.demo" target="_blank">
-        <font-awesome-icon class="icon" icon="fas fa-link" />
+        <fa-icon class="icon" icon="fas fa-link" />
         <span class="text">{{ $t('projectPage.links.demo') }}</span>
       </a>
     </li>

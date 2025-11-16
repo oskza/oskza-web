@@ -1,6 +1,6 @@
 <template>
 <AppBtn class="cta-btn" v-bind="filteredProps" pill>
-  <font-awesome-icon v-if="icon" class="icon" :icon="icon" />
+  <fa-icon v-if="icon" class="icon" :icon="icon" />
   <span class="text"><slot></slot></span>
 </AppBtn>
 </template>

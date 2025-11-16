@@ -2,7 +2,7 @@
 <AppSection class="features" :title="$t('projectPage.sectionTitles.features')">
   <ul class="feature-list">
     <li v-for="(feature, index) in features" :key="index">
-      <font-awesome-icon class="icon" icon="fas fa-circle-check" />
+      <fa-icon class="icon" icon="fas fa-circle-check" />
       <span class="text">{{ feature }}</span>
     </li>
   </ul>

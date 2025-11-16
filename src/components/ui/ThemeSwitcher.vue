@@ -1,6 +1,6 @@
 <template>
 <AppBtn class="theme-switcher" color="plain" :onClick="toggleTheme">
-  <font-awesome-icon class="icon" :icon="isDark ? 'fas fa-moon' : 'fas fa-sun'" />
+  <fa-icon class="icon" :icon="isDark ? 'fas fa-moon' : 'fas fa-sun'" />
 </AppBtn>
 </template>
 
