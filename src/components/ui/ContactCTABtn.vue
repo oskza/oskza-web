@@ -1,5 +1,9 @@
 <template>
-<CTABtn color="accent" url="/contact" icon="fa-solid fa-envelope">
+<CTABtn
+  color="accent"
+  url="/contact"
+  icon="fa-solid fa-envelope"
+>
   {{ $t('ctaBtns.contact') }}
 </CTABtn>
 </template>

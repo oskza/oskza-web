@@ -1,5 +1,9 @@
 <template>
-<AppBtn class="theme-switcher" color="plain" :onClick="toggleTheme">
+<AppBtn
+  class="theme-switcher"
+  color="plain"
+  :onClick="toggleTheme"
+>
   <fa-icon class="icon" :icon="isDark ? 'fas fa-moon' : 'fas fa-sun'" />
 </AppBtn>
 </template>

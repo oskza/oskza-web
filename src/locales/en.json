@@ -26,9 +26,6 @@
       "demo": "Live Demo"
     }
   },
-  "btns": {
-    "back": "Back"
-  },
   "links": {
     "resume": "Resume"
   },
@@ -51,8 +48,6 @@
     }
   },
   "projectFilters": {
-    "showFilters": "Filters",
-    "clearFilters": "Clear",
     "allOption": "All",
     "labels": {
       "type": "Type",
@@ -67,15 +62,6 @@
     "automation": "Automation",
     "selfhosted": "Self-Hosted",
     "webdev": "Web Dev"
-  },
-  "courses": {
-    "e7c2f546": { "name": "Programming" },
-    "f8f629ea": { "name": "Computer Networks" },
-    "dff62161": { "name": "Intro to Computer Science" },
-    "d6071694": { "name": "Algorithms" },
-    "bc9676d3": { "name": "Databases" },
-    "k3a23e01": { "name": "Special Topics" },
-    "hge14j5t": { "name": "Lab Support" }
   },
   "projects": {
     "a5sd5fs3": {
@@ -118,5 +104,14 @@
         "Dockerized deployment"
       ]
     }
+  },
+  "courses": {
+    "e7c2f546": { "name": "Programming" },
+    "f8f629ea": { "name": "Computer Networks" },
+    "dff62161": { "name": "Intro to Computer Science" },
+    "d6071694": { "name": "Algorithms" },
+    "bc9676d3": { "name": "Databases" },
+    "k3a23e01": { "name": "Special Topics" },
+    "hge14j5t": { "name": "Lab Support" }
   }
 }

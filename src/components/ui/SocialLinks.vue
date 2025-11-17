@@ -1,7 +1,10 @@
 <template>
 <ul class="social-links">
   <li v-for="link in links" :key="link.name">
-    <a :href="link.url" :target="link.external ? '_blank' : null">
+    <a
+      :href="link.url"
+      :target="link.external ? '_blank' : null"
+    >
       <fa-icon class="icon" :icon="link.icon" />
     </a>
   </li>

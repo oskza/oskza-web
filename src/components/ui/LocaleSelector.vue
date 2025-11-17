@@ -1,7 +1,12 @@
 <template>
 <ul class="locale-selector">
   <li v-for="lang in languages" :key="lang">
-    <AppBtn class="btn-lang" :class="{ selected: isSelected(lang) }" color="plain" :onClick="() => changeLang(lang)">
+    <AppBtn
+      class="btn-lang"
+      :class="{ selected: isSelected(lang) }"
+      color="plain"
+      :onClick="() => changeLang(lang)"
+    >
       {{ lang.toUpperCase() }}
     </AppBtn>
   </li>

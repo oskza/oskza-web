@@ -1,9 +1,10 @@
 <template>
-  <router-link
-    class="internal-link"
-    :to="linkTo">
-    <slot></slot>
-  </router-link>
+<router-link
+  class="internal-link"
+  :to="linkTo"
+>
+  <slot></slot>
+</router-link>
 </template>
 
 <script setup>
