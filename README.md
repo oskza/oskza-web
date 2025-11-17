@@ -8,7 +8,6 @@ Personal portfolio website
 - **Multilingual Support** with language preference persisted in `LocalStorage`
 - **Responsive Design** for mobile, tablet, and desktop
 - **Serverless Contact Form** integrated with Netlify Forms
-- **Breadcrumb Navigation** dynamically generated based on the current route
 - **Project Filters** (type, category, stack) synced with query parameters
 - **Redirects** to home on invalid pages
 
