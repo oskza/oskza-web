@@ -4,14 +4,12 @@
     <h1 class="name">{{ $t('profile.name') }}</h1>
     <h2 class="position">{{ $t('profile.position') }}</h2>
     <p class="summary">{{ $t('profile.summary') }}</p>
-    <ResumeLink />
   </div>
   <CTABtns />
 </div>
 </template>
 
 <script setup>
-import ResumeLink from './ResumeLink.vue'
 import CTABtns from './CTABtnList.vue'
 </script>
 
@@ -39,5 +37,10 @@ import CTABtns from './CTABtnList.vue'
   font-size: var(--font-xl);
   line-height: 1.7rem;
   color: var(--muted-text-color);
+}
+
+.summary {
+  max-width: 750px;
+  margin-inline: auto;
 }
 </style>
