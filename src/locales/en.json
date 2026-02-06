@@ -3,17 +3,45 @@
     "name": "Zach Oskoidis",
     "position": "Software Engineer",
     "location": "Ierapetra, Greece",
-    "summary": "I build web applications and secure self-hosted infrastructures, and provide private computer science tutoring for university and school students."
+    "summary": "Web development, self-hosted infrastructures, IoT integrations, and computer science and programming lessons."
+  },
+  "homePage": {
+    "meta": {
+      "title": "oskza.com: Zach Oskoidis / Software Engineer",
+      "description": "Web development, self-hosted infrastructures, IoT integrations, and computer science and programming lessons.",
+      "keywords": [
+        "Zach Oskoidis", "oskza", "oskozach", "software engineer", "web developer", "portfolio", "projects",
+        "web applications", "self-hosted", "iot", "cs courses", "programming courses", "cs tutor"
+      ]
+    }
   },
   "contactPage": {
-    "pageTitle": "Contact"
+    "pageTitle": "Contact",
+    "meta": {
+      "title": "oskza.com: Contact",
+      "description": "Contact details for collaborations, and computer science and programming lessons.",
+      "keywords": [ "contact", "software engineer contact", "cs courses contact" ]
+    }
   },
   "coursesPage": {
     "pageTitle": "CS Courses",
-    "summary": "I provide private lessons in Computer Science and Programming, online or in person, helping students with course understanding, assignments, and exam preparation."
+    "summary": "Private tutoring in Computer Science and Programming for school and university students, including help with coursework, exams and fundamental computing concepts.",
+    "meta": {
+      "title": "oskza.com: CS & Programming Courses",
+      "description": "Private tutoring in Computer Science and Programming for school and university students, including help with coursework, exams and fundamental computing concepts.",
+      "keywords": [
+        "computer science", "programming", "coding", "tutor", "private lesson",
+        "project support", "cs courses", "oskza courses", "online"
+      ]
+    }
   },
   "projectsPage": {
-    "pageTitle": "Projects"
+    "pageTitle": "Projects",
+    "meta": {
+      "title": "oskza.com: Projects",
+      "description": "Portfolio of client work and personal projects, including web applications, IoT integrations and self-hosted systems.",
+      "keywords": [ "projects", "portfolio", "web application", "iot integration", "self-hosted", "iot" ]
+    }
   },
   "projectPage": {
     "sectionTitles": {
