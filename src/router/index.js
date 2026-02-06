@@ -56,10 +56,6 @@ const routes = [
         path: 'projects/:slug',
         name: 'project',
         component: Project,
-        meta: {
-          titleKey: 'meta.project.title',
-          descriptionKey: 'meta.project.description'
-        },
         beforeEnter: (to, from, next) => {
           if (projects.some(p => p.slug === to.params.slug)) next()
           else next('/')

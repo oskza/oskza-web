@@ -30,7 +30,7 @@ watch([locale, () => route.fullPath], () => {
   const titleKey = route.meta?.titleKey
   document.title = titleKey
     ? t(titleKey)
-    : `${t('profile.name')} / ${t('profile.position')}`
+    : `oskza.com: ${t('profile.name')} / ${t('profile.position')}`
 
   const descriptionKey = route.meta?.descriptionKey
   setMeta('description', descriptionKey ? t(descriptionKey) : t('profile.summary'))
