@@ -1,5 +1,5 @@
 <template>
-<AppBtn class="cta-btn" v-bind="filteredProps" pill>
+<AppBtn class="cta-btn" v-bind="filteredProps" internal pill>
   <fa-icon v-if="icon" class="icon" :icon="icon" />
   <span class="text"><slot></slot></span>
 </AppBtn>
