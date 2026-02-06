@@ -3,8 +3,9 @@
   class="btn"
   :class="[`btn-${color}`, { 'btn-pill': pill, 'btn-outline': outline }]"
   :is="tag"
-  :href="isLink ? url : null"
+  :href="isLink && !internal ? url : null"
   :target="isLink && external ? '_blank' : null"
+  :to="internal ? url : null"
   @click="handleClick"
   :style="{
     '--btn-bg': bgColor,
@@ -18,21 +19,13 @@
 <script setup>
 import { computed } from 'vue'
 
-const { onClick, url, external, pill, outline, color } = defineProps({
+const { onClick, url, external, internal, pill, outline, color } = defineProps({
   onClick: Function,
   url: String,
-  external: {
-    type: Boolean,
-    default: false
-  },
-  pill: {
-    type: Boolean,
-    default: false
-  },
-  outline: {
-    type: Boolean,
-    default: false
-  },
+  external: { type: Boolean, default: false },
+  internal: { type: Boolean, default: false },
+  pill: { type: Boolean, default: false },
+  outline: { type: Boolean, default: false },
   color: {
     type: String,
     default: 'primary',
@@ -53,7 +46,7 @@ const handleClick = event => {
 
 const isLink = computed(() => !!url)
 
-const tag = computed(() => isLink.value ? 'a' : 'button')
+const tag = computed(() => isLink.value ? internal ? 'router-link' : 'a' : 'button')
 
 const bgColor = computed(() => outline ? 'transparent' : colorMap[color].bg)
 
